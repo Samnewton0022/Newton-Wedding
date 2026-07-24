@@ -197,4 +197,34 @@ footer{text-align:center;padding:70px 20px;background:#101e33;color:#f1eee8}
     .story-copy h2 {
         font-size: clamp(48px, 14vw, 68px);
     }
+.crest .cross {
+    position: relative;
+    display: block;
+    width: 12px;
+    height: 18px;
+    margin: 0 auto 10px;
+    font-size: 0;
+}
+
+.crest .cross::before,
+.crest .cross::after {
+    content: "";
+    position: absolute;
+    background: currentColor;
+}
+
+.crest .cross::before {
+    width: 1px;
+    height: 18px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.crest .cross::after {
+    width: 10px;
+    height: 1px;
+    left: 50%;
+    top: 6px;
+    transform: translateX(-50%);
 }
