@@ -152,3 +152,192 @@ footer{text-align:center;padding:65px 20px;background:#101f35;color:white}.foote
   .event-grid,.travel-grid{grid-template-columns:1fr}.wedding-day,.travel{padding:90px 22px}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.reveal,.invitation{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+/* === Invitation redesign: full-screen stationery composition === */
+.invitation-stage{
+  padding:0;
+  background:
+    radial-gradient(circle at 14% 18%,rgba(239,207,215,.34),transparent 31%),
+    radial-gradient(circle at 86% 82%,rgba(216,225,236,.34),transparent 34%),
+    #fbf8f3;
+  overflow:hidden;
+}
+.simple-invitation{
+  width:min(980px,100vw);
+  height:min(94vh,980px);
+  min-height:760px;
+  padding:38px 78px 250px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  background:linear-gradient(180deg,rgba(255,253,248,.99),rgba(255,252,247,.97));
+  border:0;
+  box-shadow:0 18px 70px rgba(31,42,57,.12);
+}
+.simple-invitation:before{
+  inset:18px;
+  border:1px solid rgba(185,150,84,.44);
+}
+.invite-border{
+  inset:29px;
+  border-color:rgba(239,207,215,.72);
+}
+.crest{
+  flex:0 0 auto;
+  width:220px;
+  height:220px;
+  margin:0 auto 10px;
+  padding:26px;
+  border-width:1.5px;
+  background:transparent;
+  box-shadow:none;
+}
+.crest:before{inset:12px}
+.crest .cross{font-size:17px;margin-bottom:7px}
+.crest strong{font-size:47px}
+.crest>span:not(.cross){font-size:10px;margin:11px 0 7px}
+.crest small{font-size:8px}
+.click-note{
+  margin:0 0 24px;
+  color:#b87787;
+  font-size:10px;
+  letter-spacing:.28em;
+}
+.invitation-copy-block{
+  position:relative;
+  z-index:4;
+  width:min(680px,100%);
+  text-align:center;
+}
+.kicker{
+  margin:0 0 13px;
+  color:#b87787;
+  text-transform:uppercase;
+  letter-spacing:.30em;
+  font-size:9px;
+  font-weight:500;
+}
+.simple-invitation h1{
+  margin:0 0 14px;
+  color:var(--navy);
+  font-size:clamp(58px,6vw,82px);
+  line-height:.98;
+}
+.invite-copy{
+  margin:0;
+  color:#37383d;
+  font-size:22px;
+  line-height:1.38;
+}
+.date{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:2px;
+  margin:17px 0 8px;
+  line-height:1.45;
+}
+.date span{
+  font-size:8px;
+  letter-spacing:.28em;
+}
+.date strong{
+  font-size:34px;
+  line-height:1.1;
+}
+.scripture{
+  margin:8px auto 1px;
+  max-width:570px;
+  font-family:"Cormorant Garamond",serif;
+  font-size:14px;
+  font-style:italic;
+  color:#6d6863;
+}
+.verse{
+  font-size:7px;
+  letter-spacing:.22em;
+}
+.invite-art-wrap{
+  position:absolute;
+  left:32px;
+  right:32px;
+  bottom:25px;
+  height:245px;
+  overflow:hidden;
+  z-index:2;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.2) 9%,#000 32%,#000 100%);
+  mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.2) 9%,#000 32%,#000 100%);
+}
+.invite-art{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 58%;
+  opacity:.86;
+  mix-blend-mode:multiply;
+  filter:saturate(.88) contrast(.95) brightness(1.04);
+  border:0;
+}
+.embossed-crest{
+  right:54px;
+  bottom:48px;
+  width:96px;
+  height:96px;
+  z-index:5;
+  border:1px solid rgba(255,255,255,.7);
+  box-shadow:
+    inset 1px 1px 2px rgba(255,255,255,.95),
+    inset -1px -1px 2px rgba(100,89,76,.10),
+    1px 1px 1px rgba(100,89,76,.07);
+  color:rgba(255,255,255,.62);
+  text-shadow:1px 1px 0 rgba(120,110,96,.12);
+  background:rgba(255,253,248,.10);
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+}
+.embossed-crest span{font-size:10px}
+.embossed-crest strong{font-size:20px;font-weight:500}
+
+@media(max-width:800px){
+  .invitation-stage{overflow:auto;align-items:start}
+  .simple-invitation{
+    width:100%;
+    height:auto;
+    min-height:100svh;
+    padding:28px 24px 190px;
+    box-shadow:none;
+  }
+  .simple-invitation:before{inset:10px}
+  .invite-border{inset:18px}
+  .crest{width:184px;height:184px;padding:21px}
+  .crest strong{font-size:39px}
+  .click-note{font-size:8px;letter-spacing:.22em;margin-bottom:19px}
+  .simple-invitation h1{font-size:50px}
+  .invite-copy{font-size:18px}
+  .date strong{font-size:27px}
+  .scripture{font-size:12px;padding:0 12px}
+  .invite-art-wrap{left:18px;right:18px;bottom:16px;height:176px}
+  .embossed-crest{width:70px;height:70px;right:29px;bottom:29px}
+}
+
+@media(max-height:820px) and (min-width:801px){
+  .simple-invitation{
+    height:100vh;
+    min-height:700px;
+    padding-top:22px;
+    padding-bottom:215px;
+  }
+  .crest{width:185px;height:185px;padding:21px;margin-bottom:6px}
+  .crest strong{font-size:40px}
+  .click-note{margin-bottom:15px;font-size:8px}
+  .simple-invitation h1{font-size:57px;margin-bottom:9px}
+  .invite-copy{font-size:19px}
+  .date{margin:12px 0 5px}
+  .date strong{font-size:29px}
+  .scripture{margin-top:4px;font-size:12px}
+  .invite-art-wrap{height:205px}
+}
