@@ -1,16 +1,12 @@
-# The Newton Collection — Version 4
+# Newton Wedding Website V3.6
 
-Complete consolidated wedding website build.
+Upload the contents of this folder to the root of the GitHub repository.
 
-## Included
-- Clean invitation with one clickable crest
-- “Click the crest to begin our story” instruction
-- Invitation-to-hero photo fade
-- Editorial framed engagement portrait
-- Luxury typography countdown
-- Custom standalone SVG artwork for The Don CeSar, vodka sodas, Sacred Heart Catholic Church, Carrollwood Country Club, and decorative florals
-- Updated navigation and closing-page footer
-- Responsive desktop and mobile layouts
-
-## GitHub Pages upload
-Upload `index.html`, `styles.css`, `script.js`, and the complete `assets` folder to the root of the `Newton-Wedding` repository. Replace the older files with these versions.
+Changes in this revision:
+- cleaner V3-style invitation without the obstructing envelope
+- large, fully visible clickable crest
+- clear “Click the crest to begin our story” instruction
+- more white, blush pink, navy, and restrained gold
+- artwork crops contain no wording
+- Vodka Red Bull is brighter/yellow rather than brown
+- Don CeSar artwork remains colorful with sky, beach, water, and palms
