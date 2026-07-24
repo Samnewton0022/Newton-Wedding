@@ -72,9 +72,12 @@ img,svg{display:block;max-width:100%}
 .story-copy h2{font-size:clamp(52px,6vw,86px);color:var(--navy);margin:14px 0}
 .story-copy h3{font-size:24px;color:#b87882;margin-bottom:28px}
 .story-copy p:last-child{max-width:560px;color:var(--muted)}
-.illustration{display:grid;place-items:center;padding:80px;color:var(--navy)}
+.illustration{display:grid;place-items:center;padding:20px;color:var(--navy)}
 .illustration svg{width:min(100%,620px);max-height:620px}
-.drink-illustration{background:#f0d9dc}.hotel-illustration{background:#e8c8cc}
+.drink-illustration,
+.hotel-illustration {
+    background: transparent;
+}
 .vodka-sodas-realistic{display:block;width:min(100%,620px);height:auto;object-fit:contain;filter:drop-shadow(0 18px 18px rgba(20,36,61,.10))}
 .vodka-sodas-sketch{overflow:visible}
 .vodka-sodas-sketch .glass-lines{stroke-width:3.2}
@@ -145,10 +148,8 @@ footer{text-align:center;padding:70px 20px;background:#101e33;color:#f1eee8}
 }
 
 .don-cesar-watercolor {
-    display: block;
-    width: 100%;
-    max-width: none;
+    width: 95%;
+    max-width: 900px;
     height: auto;
-    margin: 0 auto;
-    object-fit: contain;
+}
 }
