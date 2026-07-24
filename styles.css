@@ -75,6 +75,13 @@ img,svg{display:block;max-width:100%}
 .illustration{display:grid;place-items:center;padding:80px;color:var(--navy)}
 .illustration svg{width:min(100%,620px);max-height:620px}
 .drink-illustration{background:#f0d9dc}.hotel-illustration{background:#e8c8cc}
+.vodka-sodas-sketch{overflow:visible}
+.vodka-sodas-sketch .glass-lines{stroke-width:3.2}
+.vodka-sodas-sketch .ice-lines{stroke-width:2.1;opacity:.66}
+.vodka-sodas-sketch .lime-lines{stroke-width:3}
+.vodka-sodas-sketch .bubble-lines{stroke-width:1.8;opacity:.68}
+.vodka-sodas-sketch .glass-shadow{stroke-width:2;opacity:.24}
+
 .details{padding:145px 5vw;background:var(--navy);color:white}
 .section-title{text-align:center;margin-bottom:70px}.details .section-title h2{color:white}
 .detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px;max-width:1120px;margin:auto}
