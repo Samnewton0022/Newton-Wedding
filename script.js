@@ -2,11 +2,24 @@ const opening = document.getElementById("opening");
 const openButton = document.getElementById("openInvitation");
 const body = document.body;
 
-openButton.addEventListener("click", () => {
+function openSite() {
+  if (!opening) return;
   opening.classList.add("is-open");
   body.classList.remove("locked");
+  document.documentElement.style.overflow = "";
   sessionStorage.setItem("newtonInvitationOpened", "true");
-});
+  window.setTimeout(() => {
+    opening.style.display = "none";
+  }, 950);
+}
+
+if (openButton) {
+  openButton.addEventListener("click", openSite);
+  openButton.addEventListener("touchend", (event) => {
+    event.preventDefault();
+    openSite();
+  }, { passive: false });
+}
 
 if (sessionStorage.getItem("newtonInvitationOpened") === "true") {
   opening.style.display = "none";
