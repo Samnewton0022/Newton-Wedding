@@ -137,8 +137,7 @@ footer{text-align:center;padding:70px 20px;background:#101e33;color:#f1eee8}
 /* Don CeSar Watercolor */
 .don-cesar-watercolor {
     display: block;
-    width: 100%;
-    max-width: 700px;
+    width: min(100%, 850px);
     height: auto;
     margin: 0 auto;
 }
