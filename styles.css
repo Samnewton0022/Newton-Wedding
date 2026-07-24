@@ -72,7 +72,7 @@ img,svg{display:block;max-width:100%}
 .story-copy h2{font-size:clamp(52px,6vw,86px);color:var(--navy);margin:14px 0}
 .story-copy h3{font-size:24px;color:#b87882;margin-bottom:28px}
 .story-copy p:last-child{max-width:560px;color:var(--muted)}
-.illustration{display:grid;place-items:center;padding:20px;color:var(--navy)}
+.illustration{display:grid;place-items:center;padding:20px 20px 20px 70px;color:var(--navy)}
 .illustration svg{width:min(100%,620px);max-height:620px}
 .drink-illustration,
 .hotel-illustration {
