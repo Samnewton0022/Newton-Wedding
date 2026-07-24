@@ -341,3 +341,110 @@ footer{text-align:center;padding:65px 20px;background:#101f35;color:white}.foote
   .scripture{margin-top:4px;font-size:12px}
   .invite-art-wrap{height:205px}
 }
+
+/* Invitation refinement pass — July 2026 */
+.invitation-stage{
+  background:
+    radial-gradient(ellipse at 8% 10%,rgba(239,207,215,.45),transparent 34%),
+    radial-gradient(ellipse at 92% 88%,rgba(219,228,238,.42),transparent 36%),
+    radial-gradient(ellipse at 75% 12%,rgba(255,255,255,.72),transparent 30%),
+    #faf6f0;
+}
+.linen{
+  opacity:.62;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='4' seed='7'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.10'/%3E%3C/svg%3E"),
+    repeating-linear-gradient(0deg,rgba(125,105,82,.018) 0,rgba(125,105,82,.018) 1px,transparent 1px,transparent 4px),
+    repeating-linear-gradient(90deg,rgba(125,105,82,.014) 0,rgba(125,105,82,.014) 1px,transparent 1px,transparent 5px);
+}
+.simple-invitation{
+  width:min(980px,100vw);
+  height:min(98vh,1080px);
+  min-height:830px;
+  padding:42px 82px 278px;
+  border:0;
+  background:
+    radial-gradient(circle at 8% 8%,rgba(239,207,215,.13),transparent 25%),
+    radial-gradient(circle at 92% 90%,rgba(218,228,238,.12),transparent 27%),
+    linear-gradient(180deg,rgba(255,254,250,.995),rgba(255,252,247,.985));
+  box-shadow:0 24px 78px rgba(31,42,57,.14);
+  transition:transform 1.05s cubic-bezier(.22,.72,.18,1),opacity .82s ease,box-shadow .75s ease;
+}
+/* Remove the former outer gold rule; retain one quiet inner border. */
+.simple-invitation:before{display:none}
+.invite-border{
+  inset:24px;
+  border:1px solid rgba(23,48,82,.12);
+}
+.invitation-stage.open .simple-invitation{
+  transform:translateY(-20px) scale(.992);
+  opacity:0;
+  box-shadow:0 42px 95px rgba(31,42,57,.22);
+}
+.click-note{
+  margin-bottom:27px;
+  color:rgba(184,119,135,.78);
+  font-size:8px;
+  font-weight:400;
+  letter-spacing:.30em;
+}
+.scripture{
+  margin-top:15px;
+  margin-bottom:3px;
+}
+.verse{display:block;margin-top:2px}
+.invite-art-wrap{
+  left:0;
+  right:0;
+  bottom:0;
+  height:265px;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.12) 8%,rgba(0,0,0,.72) 25%,#000 43%,#000 100%);
+  mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.12) 8%,rgba(0,0,0,.72) 25%,#000 43%,#000 100%);
+}
+.invite-art{
+  inset:-4px -8px -8px;
+  width:calc(100% + 16px);
+  height:calc(100% + 12px);
+  object-position:center 59%;
+  opacity:.78;
+  filter:saturate(.72) contrast(.90) brightness(1.08);
+  transform:scale(1.025);
+}
+/* The artwork already contains the cream blind-embossed crest. */
+.embossed-crest{display:none!important}
+.editorial-hero.hero-awaiting .portrait-frame,
+.editorial-hero.hero-awaiting .hero-copy{opacity:0;transform:translateY(22px);filter:blur(6px)}
+.editorial-hero.hero-reveal .portrait-frame{animation:heroPhotoReveal 1.35s cubic-bezier(.18,.72,.2,1) both}
+.editorial-hero.hero-reveal .hero-copy{animation:heroCopyReveal 1s ease .24s both}
+@keyframes heroPhotoReveal{
+  from{opacity:0;transform:translateY(26px) scale(.985);filter:blur(7px)}
+  to{opacity:1;transform:none;filter:none}
+}
+@keyframes heroCopyReveal{
+  from{opacity:0;transform:translateY(18px);filter:blur(3px)}
+  to{opacity:1;transform:none;filter:none}
+}
+@media(max-width:800px){
+  .simple-invitation{
+    min-height:850px;
+    padding:30px 24px 205px;
+  }
+  .invite-border{inset:14px}
+  .click-note{font-size:7px;letter-spacing:.24em;margin-bottom:20px}
+  .scripture{margin-top:10px}
+  .invite-art-wrap{height:188px}
+}
+@media(max-height:820px) and (min-width:801px){
+  .simple-invitation{
+    height:100vh;
+    min-height:740px;
+    padding-top:20px;
+    padding-bottom:230px;
+  }
+  .invite-art-wrap{height:220px}
+  .scripture{margin-top:8px}
+}
+@media(prefers-reduced-motion:reduce){
+  .simple-invitation,.editorial-hero.hero-reveal .portrait-frame,.editorial-hero.hero-reveal .hero-copy{animation:none!important;transition:none!important}
+  .editorial-hero.hero-awaiting .portrait-frame,.editorial-hero.hero-awaiting .hero-copy{opacity:1;transform:none;filter:none}
+}
