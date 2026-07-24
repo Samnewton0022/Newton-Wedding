@@ -1,42 +1,39 @@
-# Sam & Madison Wedding Website — Version 2
+# Sam & Madison Wedding Website — Version 3
 
-This is the upgraded project for the existing GitHub repository:
+This is a complete static website ready for GitHub Pages.
 
-`Samnewton0022/Newton-Wedding`
+## Upload to GitHub
 
-## What changed in Version 2
-- Enhanced animated invitation and envelope
-- Blush wax-seal button
-- Don CeSar watermark
-- Custom Newton crest styling
-- St. John Paul II quote
-- Matthew 19:6
-- Existing countdown, journey, venues, RSVP, gallery, travel, registry, and FAQ
+1. Open your `Newton-Wedding` repository.
+2. Delete or replace the existing website files.
+3. Upload everything inside this folder:
+   - `index.html`
+   - `styles.css`
+   - `script.js`
+   - the entire `assets` folder
+4. Commit the changes.
+5. Open your GitHub Pages link and hard refresh:
+   - Mac: Command + Shift + R
+   - Windows: Control + Shift + R
 
-## Upload to the same repository
-You do **not** need a new repository.
+## Important
 
-1. Open the existing `Newton-Wedding` repository.
-2. Use **Add file → Upload files**.
-3. Upload all files and folders from this Version 2 folder.
-4. Allow GitHub to replace files with the same names.
-5. Commit the changes.
-6. Keep GitHub Pages publishing from `main` and `/(root)`.
+The engagement photograph is already included at:
 
-## Required folder structure
-The project must include:
+`assets/engagement.jpg`
 
-assets/
-  images/
-    engagement.jpg
-    don-cesar.png
-    vodka-redbull.svg
+## Reset the opening invitation
 
-index.html
-styles.css
-script.js
-settings.js
-README.md
+The invitation opens once per browser tab. To see the opening again:
+- close the tab and reopen it, or
+- open the site in a private/incognito window.
 
-## Editing content
-Open `settings.js` to change names, dates, wording, venues, directions, RSVP deadline, registry links, and travel details.
+## Next recommended update
+
+Version 3.1 can add:
+- full RSVP form connected to Google Sheets or Formspree
+- hotel room block
+- registry links
+- FAQ
+- wedding party
+- expanded gallery

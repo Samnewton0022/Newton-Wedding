@@ -1,164 +1,214 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <meta name="theme-color" content="#24395d"/>
-  <meta name="description" content="The wedding of Sam and Madison — September 25, 2027 in Tampa, Florida."/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#203454">
+  <meta name="description" content="The wedding of Sam and Madison — September 25, 2027 in Tampa, Florida.">
   <title>Sam & Madison | September 25, 2027</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Parisienne&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&family=Italiana&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <div id="invitation" class="invitation-screen">
-    <div class="envelope-shell">
-      <div class="envelope-flap"></div>
-      <div class="envelope-wrap">
-        <div class="don-watermark"></div>
-        <div class="corner-floral floral-one">❀</div>
-        <div class="corner-floral floral-two">❀</div>
-        <div class="crest">
-          <span class="crest-cross">✝</span>
-          <div class="crest-palms">❧</div>
-          <div class="monogram">S <i>&</i> M</div>
-          <div class="crest-n">N</div>
-          <p>The Newtons</p>
-          <small>Est. September 25, 2027</small>
-        </div>
-        <p class="invitation-kicker">Together with their families</p>
-        <p class="invitation-copy">joyfully invite you to celebrate<br>the Sacrament of Holy Matrimony</p>
-        <div class="invitation-date">September 25, 2027</div>
-        <blockquote class="saint-quote">“<span id="saintQuote"></span>”<cite id="saintAttribution"></cite></blockquote>
-        <blockquote class="scripture-quote">“<span id="verseText"></span>”<cite id="verseRef"></cite></blockquote>
-        <button id="openInvitation" class="wax-button"><span>Open Invitation</span></button>
-      </div>
+<body class="locked">
+  <div class="opening" id="opening" aria-label="Wedding invitation">
+    <div class="opening-sketch" aria-hidden="true">
+      <svg viewBox="0 0 1200 480" role="img">
+        <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M64 414h1072M170 414V230h58v-70h74v70h62V122h92v108h62V74h164v156h62V122h92v108h62v-70h74v70h58v184"/>
+          <path d="M216 414V260h136v154M848 414V260h136v154M456 414V250h288v164"/>
+          <path d="M508 414V302h184v112M600 74V20M574 45h52"/>
+          <path d="M522 118h156M530 150h140M538 182h124M548 214h104"/>
+          <path d="M260 190h48M892 190h48M392 156h36M772 156h36"/>
+          <path d="M188 414c20-62 56-86 102-86s82 24 102 86M808 414c20-62 56-86 102-86s82 24 102 86"/>
+          <path d="M92 414c16-44 38-66 66-68M1108 414c-16-44-38-66-66-68"/>
+          <path d="M242 328h82M876 328h82M478 278h244"/>
+          <path d="M550 414v-70h100v70M586 344v70M614 344v70"/>
+          <path d="M197 230l31-36 31 36M941 230l31-36 31 36M364 122l46-44 46 44M744 122l46-44 46 44"/>
+          <path d="M518 74l82-54 82 54"/>
+          <path d="M84 414c26-16 48-15 69 3M1047 417c21-18 43-19 69-3"/>
+        </g>
+      </svg>
     </div>
+
+    <article class="invitation-card" id="invitationCard">
+      <div class="paper-grain"></div>
+      <div class="crest" aria-label="Sam and Madison, The Newtons">
+        <span class="cross">✝</span>
+        <strong>S <i>&</i> M</strong>
+        <span>THE NEWTONS</span>
+        <small>IX • XXV • MMXXVII</small>
+      </div>
+      <p class="kicker">Together with their families</p>
+      <h1>Sam <em>&</em> Madison</h1>
+      <p class="invite-copy">joyfully invite you to celebrate<br>the Sacrament of Holy Matrimony</p>
+      <div class="date-lockup">
+        <span>Saturday</span>
+        <strong>September 25, 2027</strong>
+        <span>Tampa, Florida</span>
+      </div>
+      <blockquote>“And now these three remain: faith, hope and love. But the greatest of these is love.”</blockquote>
+      <cite>1 Corinthians 13:13</cite>
+      <button class="seal" id="openInvitation" type="button">
+        <span class="seal-monogram">S&amp;M</span>
+        <span class="seal-label">Open</span>
+      </button>
+    </article>
   </div>
 
   <header class="site-header">
-    <a href="#home" class="mini-crest">S & M</a>
-    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-    <nav>
-      <a href="#journey">Our Journey</a><a href="#details">Wedding Day</a><a href="#travel">Travel</a>
-      <a href="#rsvp">RSVP</a><a href="#gallery">Gallery</a><a href="#registry">Registry</a><a href="#faq">FAQ</a>
+    <a class="brand" href="#home" aria-label="Back to top">S <span>&</span> M</a>
+    <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="siteNav">Menu</button>
+    <nav id="siteNav">
+      <a href="#story">Our Journey</a>
+      <a href="#details">The Celebration</a>
+      <a href="#travel">Travel</a>
+      <a href="#rsvp">RSVP</a>
     </nav>
   </header>
 
   <main>
-    <section id="home" class="hero">
-      <div class="hero-overlay"></div>
-      <div class="hero-content reveal">
-        <p class="eyebrow">Together with their families</p>
-        <h1><span id="firstName"></span> <em>&</em> <span id="secondName"></span></h1>
-        <p class="hero-date">September 25, 2027 · Tampa, Florida</p>
-        <div class="gold-rule"></div>
-        <div id="countdown" class="countdown"></div>
-        <a class="outline-button" href="#journey">Begin Our Story</a>
+    <section class="hero" id="home">
+      <div class="hero-photo" role="img" aria-label="Sam and Madison"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow">The wedding of</p>
+        <h2>Sam <em>&</em> Madison</h2>
+        <p>September 25, 2027 · Tampa, Florida</p>
+        <a href="#story" class="text-link">Enter our story <span>↓</span></a>
       </div>
     </section>
 
-    <section class="intro-section reveal">
+    <section class="editorial-intro reveal">
       <p class="script">Every love story is beautiful.</p>
-      <h2>Ours is our favorite.</h2>
-      <p>From Charlotte, to St. Pete Beach, to Tampa—and forever.</p>
+      <h2>Ours began with a<br>Vodka Red Bull.</h2>
+      <p>From a bar in Charlotte, to a pink palace by the sea, to forever in Tampa.</p>
     </section>
 
-    <section id="journey" class="journey">
-      <div class="section-heading reveal"><span>Our Journey</span><h2>Four Chapters, One Forever</h2></div>
-
-      <article class="chapter reveal">
-        <div class="chapter-copy"><p class="chapter-number">Chapter I</p><h3 id="metTitle"></h3><h4 id="metVenue"></h4><p id="metCity"></p><blockquote id="metText"></blockquote></div>
-        <div class="chapter-art drink-card"><img src="assets/images/vodka-redbull.svg" alt="Illustration of a Vodka Red Bull"/></div>
+    <section class="story" id="story">
+      <article class="story-row reveal">
+        <div class="story-copy">
+          <p class="chapter">Chapter I</p>
+          <h2>We Met at a Bar</h2>
+          <h3>The Gin Mill · Charlotte, North Carolina</h3>
+          <p>One ordinary night, one unforgettable meeting, and one Vodka Red Bull later—the rest became our favorite story.</p>
+        </div>
+        <div class="illustration drink-illustration" aria-label="Line drawing of a Vodka Red Bull">
+          <svg viewBox="0 0 440 520" role="img">
+            <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M110 122h220l-34 328H144z"/>
+              <path d="M126 198h188M134 276h172"/>
+              <path d="M164 154c54 14 109 14 164 0"/>
+              <path d="M294 125l48-85"/>
+              <path d="M331 39l18 10"/>
+              <path d="M179 342c23-30 58-44 96-35"/>
+              <path d="M204 344c13-14 33-20 49-13"/>
+              <path d="M153 450h134"/>
+              <path d="M176 91c29-38 73-50 112-26"/>
+              <path d="M201 64c8 18 17 31 31 42"/>
+            </g>
+            <text x="220" y="242" text-anchor="middle" font-size="22" font-family="serif" fill="currentColor">VODKA</text>
+            <text x="220" y="268" text-anchor="middle" font-size="17" font-family="sans-serif" letter-spacing="3" fill="currentColor">RED BULL</text>
+          </svg>
+        </div>
       </article>
 
-      <article class="chapter reverse proposal reveal">
-        <div class="chapter-copy"><p class="chapter-number">Chapter II</p><h3>The Proposal</h3><h4 id="proposalVenue"></h4><p id="proposalCity"></p><blockquote>In front of the iconic Pink Palace, one question changed everything.<br><strong>She said yes.</strong></blockquote><button class="ring-easter" aria-label="Reveal engagement message">💍</button><p class="ring-message">March 28, 2026 — the easiest “yes” ever.</p></div>
-        <div class="chapter-art don-card"><img src="assets/images/don-cesar.png" alt="The Don CeSar hotel"/></div>
+      <article class="story-row reverse blush reveal">
+        <div class="story-copy">
+          <p class="chapter">Chapter II</p>
+          <h2>The Easiest Yes</h2>
+          <h3>The Don CeSar · St. Pete Beach, Florida</h3>
+          <p>On March 28, 2026, in front of the Pink Palace, Sam asked the question that changed everything. Madison said yes.</p>
+        </div>
+        <div class="illustration hotel-illustration" aria-label="Line drawing of The Don CeSar">
+          <svg viewBox="0 0 700 470" role="img">
+            <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M45 414h610M82 414V220h62v-68h70v68h58V116h77v104h52V72h98v148h52V116h77v104h58v-68h70v68h62v194"/>
+              <path d="M184 414V250h88v164M428 414V250h88v164M298 414V250h104v164"/>
+              <path d="M326 414v-83h48v83M350 72V28M332 48h36"/>
+              <path d="M302 116l48-44 48 44M82 220l31-32 31 32M556 220l31-32 31 32"/>
+              <path d="M220 116l31-32 31 32M418 116l31-32 31 32"/>
+              <path d="M112 275h34M554 275h34M317 282h66"/>
+              <path d="M152 414c18-45 41-64 70-64s52 19 70 64M408 414c18-45 41-64 70-64s52 19 70 64"/>
+              <path d="M55 414c16-31 32-43 50-45M645 414c-16-31-32-43-50-45"/>
+            </g>
+          </svg>
+        </div>
       </article>
+    </section>
 
-      <article class="chapter reveal">
-        <div class="chapter-copy"><p class="chapter-number">Chapter III</p><h3>We Say “I Do”</h3><h4 id="ceremonyVenue"></h4><p id="ceremonyCity"></p><blockquote>We joyfully invite you to celebrate the Sacrament of Holy Matrimony.</blockquote></div>
-        <div class="chapter-art icon-art">✝</div>
+    <section class="details" id="details">
+      <div class="section-title reveal">
+        <p class="eyebrow">September 25, 2027</p>
+        <h2>The Celebration</h2>
+      </div>
+      <div class="detail-grid">
+        <article class="detail-card reveal">
+          <div class="detail-icon">✝</div>
+          <p class="time">2:00 PM</p>
+          <h3>Sacred Heart Catholic Church</h3>
+          <p>Tampa, Florida</p>
+          <a href="https://maps.google.com/?q=Sacred+Heart+Catholic+Church+Tampa+Florida" target="_blank" rel="noopener">View directions</a>
+        </article>
+        <article class="detail-card reveal">
+          <div class="detail-icon">♕</div>
+          <p class="time">5:00 PM</p>
+          <h3>Carrollwood Country Club</h3>
+          <p>Tampa, Florida</p>
+          <a href="https://maps.google.com/?q=Carrollwood+Country+Club+Tampa+Florida" target="_blank" rel="noopener">View directions</a>
+        </article>
+      </div>
+      <div class="countdown-wrap reveal">
+        <p class="eyebrow">Until we say I do</p>
+        <div class="countdown" id="countdown"></div>
+      </div>
+    </section>
+
+    <section class="travel" id="travel">
+      <div class="section-title reveal">
+        <p class="eyebrow">Welcome to Tampa</p>
+        <h2>Travel & Stay</h2>
+      </div>
+      <div class="travel-copy reveal">
+        <p>Hotel recommendations, room-block information, transportation notes, and a few of our favorite Tampa spots will be added as the weekend gets closer.</p>
+        <div class="travel-columns">
+          <div><span>Airport</span><strong>Tampa International Airport</strong></div>
+          <div><span>Weekend</span><strong>September 24–26, 2027</strong></div>
+          <div><span>More details</span><strong>Coming soon</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rsvp" id="rsvp">
+      <article class="rsvp-card reveal">
+        <p class="script">Kindly reply</p>
+        <h2>RSVP</h2>
+        <p>Formal online RSVP will open after invitations are mailed.</p>
+        <a href="mailto:?subject=Sam%20and%20Madison%20Wedding" class="button">Save the date</a>
       </article>
-
-      <article class="chapter reverse navy-chapter reveal">
-        <div class="chapter-copy"><p class="chapter-number">Chapter IV</p><h3>The Celebration</h3><h4 id="receptionVenue"></h4><p id="receptionCity"></p><blockquote>Dinner, dancing, and the beginning of forever.</blockquote></div>
-        <div class="chapter-art icon-art">🥂</div>
-      </article>
-    </section>
-
-    <section id="details" class="details-section">
-      <div class="section-heading reveal"><span>September 25, 2027</span><h2>Wedding Day</h2></div>
-      <div class="details-grid">
-        <article class="detail-card reveal"><p class="time" id="ceremonyTime"></p><h3>Ceremony</h3><p id="ceremonyVenue2"></p><p id="ceremonyCity2"></p><a id="ceremonyMap" target="_blank" rel="noopener">Directions</a></article>
-        <article class="detail-card reveal"><p class="time">Following the ceremony</p><h3>Interlude</h3><p>Time to refresh, travel, and enjoy Tampa before the reception.</p></article>
-        <article class="detail-card reveal"><p class="time" id="receptionTime"></p><h3>Reception</h3><p id="receptionVenue2"></p><p id="receptionCity2"></p><a id="receptionMap" target="_blank" rel="noopener">Directions</a></article>
-      </div>
-      <div class="verse-banner reveal"><blockquote>“<span id="verseText2"></span>”</blockquote><cite id="verseRef2"></cite></div>
-    </section>
-
-    <section id="travel" class="travel-section">
-      <div class="section-heading reveal"><span>Plan Your Stay</span><h2>Travel & Tampa</h2></div>
-      <div class="travel-grid">
-        <article class="reveal"><h3>Hotels</h3><p id="travelIntro"></p></article>
-        <article class="reveal"><h3>Airports</h3><ul id="airportList"></ul></article>
-        <article class="reveal"><h3>Things to Do</h3><p>Explore Tampa’s waterfront, historic Ybor City, Hyde Park Village, and nearby Gulf beaches.</p></article>
-      </div>
-    </section>
-
-    <section id="rsvp" class="rsvp-section">
-      <div class="paper-card reveal">
-        <p class="script">Kindly Reply</p><h2>RSVP</h2>
-        <p>Please respond by <strong id="rsvpDeadline"></strong>.</p>
-        <form id="rsvpForm">
-          <div class="field-row"><label>Guest name<input required name="name" type="text"/></label><label>Email<input required name="email" type="email"/></label></div>
-          <div class="field-row"><label>Will you attend?<select required name="attendance"><option value="">Choose one</option><option>Joyfully accepts</option><option>Regretfully declines</option></select></label><label>Number attending<input name="guests" min="1" max="10" value="1" type="number"/></label></div>
-          <label>Song request<input name="song" type="text"/></label>
-          <label>Message<textarea name="message" rows="4"></textarea></label>
-          <button class="gold-button" type="submit">Send RSVP</button>
-          <p class="form-note">The form is ready for a free Formspree endpoint. Until one is added in <code>settings.js</code>, submissions will be saved as a downloadable text file on the guest’s device.</p>
-        </form>
-        <div id="rsvpThanks" class="thanks" hidden><h3>Thank you!</h3><p>We can’t wait to celebrate with you.</p></div>
-      </div>
-    </section>
-
-    <section id="gallery" class="gallery-section">
-      <div class="section-heading reveal"><span>Snapshots</span><h2>Gallery</h2></div>
-      <div class="gallery-grid">
-        <button class="gallery-item tall reveal"><img src="assets/images/engagement.jpg" alt="Sam and Madison engagement photo"/></button>
-        <button class="gallery-item reveal"><img src="assets/images/don-cesar.png" alt="The Don CeSar"/></button>
-        <div class="gallery-placeholder reveal">More memories coming soon</div>
-      </div>
-    </section>
-
-    <section id="registry" class="registry-section">
-      <div class="section-heading reveal"><span>With Gratitude</span><h2>Registry</h2></div>
-      <p class="reveal">Your presence is the greatest gift. Registry details will be added here when ready.</p>
-      <div id="registryLinks" class="registry-links reveal"></div>
-    </section>
-
-    <section id="faq" class="faq-section">
-      <div class="section-heading reveal"><span>Good to Know</span><h2>Frequently Asked Questions</h2></div>
-      <div class="faq-list">
-        <details class="reveal"><summary>What should I wear?</summary><p>Formal or cocktail attire is encouraged. Additional guidance can be added once the dress code is finalized.</p></details>
-        <details class="reveal"><summary>Can I bring a guest?</summary><p>Please refer to your invitation. We can update this answer once the guest policy is finalized.</p></details>
-        <details class="reveal"><summary>Are children invited?</summary><p>Details will be shared with each household on the formal invitation.</p></details>
-        <details class="reveal"><summary>Where should I park?</summary><p>Parking information for both venues will be added closer to the wedding.</p></details>
-      </div>
     </section>
 
     <section class="finale">
+      <div class="finale-photo"></div>
       <div class="finale-overlay"></div>
-      <div class="reveal"><p class="script">The best is yet to come.</p><h2>See You Soon</h2><p>Love,<br><strong>Sam & Madison</strong></p><small>From Charlotte… to St. Pete Beach… to Tampa… and forever.</small></div>
+      <div class="finale-copy reveal">
+        <p class="script">The best is yet to come.</p>
+        <h2>See you in Tampa.</h2>
+        <p>With love,<br><strong>Sam & Madison</strong></p>
+      </div>
     </section>
   </main>
 
-  <footer><div class="mini-monogram">S & M</div><p>September 25, 2027 · Tampa, Florida</p><p>Made with love for The Newtons</p></footer>
-  <button class="to-top" aria-label="Back to top">↑</button>
-  <div id="lightbox" class="lightbox" hidden><button aria-label="Close">×</button><img alt="Expanded gallery image"/></div>
+  <footer>
+    <div class="footer-crest">
+      <span>✝</span>
+      <strong>S & M</strong>
+      <small>IX • XXV • MMXXVII</small>
+    </div>
+    <p>Crafted with love for the future Newtons.</p>
+  </footer>
 
-  <script src="settings.js"></script><script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
