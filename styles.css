@@ -156,3 +156,45 @@ footer{text-align:center;padding:70px 20px;background:#101e33;color:#f1eee8}
     height:auto;
     transform:none;
 }
+@media (max-width: 768px) {
+    .story-row {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .story-row.reverse .story-copy {
+        order: initial;
+    }
+
+    .story-copy {
+        padding: 60px 28px;
+    }
+
+    .illustration {
+        padding: 40px 24px;
+    }
+
+    .hotel-illustration {
+        margin-left: 0;
+        padding: 30px 24px;
+    }
+
+    .don-cesar-watercolor {
+        display: block;
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        transform: none;
+        margin: 0 auto;
+    }
+
+    .vodka-sodas-realistic {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .story-copy h2 {
+        font-size: clamp(48px, 14vw, 68px);
+    }
+}
