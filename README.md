@@ -1,36 +1,42 @@
-# Sam & Madison Wedding Website
+# Sam & Madison Wedding Website — Version 2
 
-## Quick preview
-Open `index.html` in a browser.
+This is the upgraded project for the existing GitHub repository:
 
-## Edit the content
-Open `settings.js`. Names, dates, venue details, maps, registry links, travel text, and the RSVP deadline are all stored there.
+`Samnewton0022/Newton-Wedding`
 
-## Replace photos
-- Homepage and gallery: `assets/images/engagement.jpg`
-- Proposal image: `assets/images/don-cesar.png`
+## What changed in Version 2
+- Enhanced animated invitation and envelope
+- Blush wax-seal button
+- Don CeSar watermark
+- Custom Newton crest styling
+- St. John Paul II quote
+- Matthew 19:6
+- Existing countdown, journey, venues, RSVP, gallery, travel, registry, and FAQ
 
-Keep the same filenames and upload the replacements to avoid changing code.
+## Upload to the same repository
+You do **not** need a new repository.
 
-## Make RSVP submissions arrive by email
-1. Create a free account at Formspree.
-2. Create a form and copy its endpoint, such as `https://formspree.io/f/abcxyz`.
-3. Paste that URL between the quotation marks beside `formAction` in `settings.js`.
-4. Commit/upload the changed file.
+1. Open the existing `Newton-Wedding` repository.
+2. Use **Add file → Upload files**.
+3. Upload all files and folders from this Version 2 folder.
+4. Allow GitHub to replace files with the same names.
+5. Commit the changes.
+6. Keep GitHub Pages publishing from `main` and `/(root)`.
 
-Until that endpoint is added, the RSVP form downloads a text file on the guest's device so the site can be tested without losing their answers.
+## Required folder structure
+The project must include:
 
-## Publish with GitHub Pages
-1. Create a new public GitHub repository, for example `newtons-wedding`.
-2. Upload everything inside this folder. `index.html` must be at the top level.
-3. Open repository **Settings**.
-4. Select **Pages** in the left sidebar.
-5. Under **Build and deployment**, choose **Deploy from a branch**.
-6. Choose branch **main**, folder **/(root)**, then click **Save**.
-7. Wait about 1–3 minutes. GitHub will display your public URL.
+assets/
+  images/
+    engagement.jpg
+    don-cesar.png
+    vodka-redbull.svg
 
-Your URL should resemble:
-`https://YOUR-USERNAME.github.io/newtons-wedding/`
+index.html
+styles.css
+script.js
+settings.js
+README.md
 
-## Update the website later
-Upload the changed file to the same repository and commit it. GitHub Pages will republish automatically.
+## Editing content
+Open `settings.js` to change names, dates, wording, venues, directions, RSVP deadline, registry links, and travel details.

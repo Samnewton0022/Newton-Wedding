@@ -2,7 +2,7 @@ const W = window.WEDDING;
 const $ = s => document.querySelector(s);
 const set = (s,v) => { const el=$(s); if(el) el.textContent=v; };
 
-set("#firstName",W.couple.first); set("#secondName",W.couple.second);
+set("#firstName",W.couple.first); set("#secondName",W.couple.second); set("#saintQuote",W.invitation.saintQuote); set("#saintAttribution",W.invitation.saintAttribution);
 set("#verseText",W.verse.text); set("#verseRef",W.verse.reference);
 set("#verseText2",W.verse.text); set("#verseRef2",W.verse.reference);
 set("#metTitle",W.story.metTitle); set("#metText",W.story.metText);
@@ -28,7 +28,8 @@ function countdown(){
 countdown(); setInterval(countdown,1000);
 
 $("#openInvitation").addEventListener("click",()=>{
-  $("#invitation").classList.add("opened");
+  $("#invitation").classList.add("opening");
+  setTimeout(()=>$("#invitation").classList.add("opened"),650);
   $(".site-header").classList.add("visible");
   document.body.style.overflow="";
   setTimeout(()=>$("#invitation").remove(),1000);

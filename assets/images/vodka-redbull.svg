@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+<defs>
+  <linearGradient id="drink" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#d7a3a8"/>
+    <stop offset="1" stop-color="#7c2748"/>
+  </linearGradient>
+  <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-opacity=".18"/></filter>
+</defs>
+<rect width="400" height="500" fill="none"/>
+<g filter="url(#shadow)">
+  <path d="M105 90h190l-28 300c-3 34-30 60-64 60h-6c-34 0-61-26-64-60z" fill="#fff" opacity=".82" stroke="#c7a45c" stroke-width="5"/>
+  <path d="M126 170h148l-20 214c-2 22-20 39-42 39h-24c-22 0-40-17-42-39z" fill="url(#drink)" opacity=".86"/>
+  <g fill="#fff" opacity=".72">
+    <circle cx="165" cy="215" r="18"/><circle cx="220" cy="260" r="22"/><circle cx="185" cy="320" r="20"/>
+  </g>
+  <path d="M247 48l-55 190" stroke="#24395d" stroke-width="10" stroke-linecap="round"/>
+  <path d="M252 48l31 14" stroke="#c7a45c" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="246" cy="48" r="9" fill="#d7a3a8"/>
+  <path d="M215 128c44-43 85-9 72 28-13 36-54 19-72-28z" fill="#d8c54c" stroke="#24395d" stroke-width="4"/>
+</g>
+<text x="200" y="485" text-anchor="middle" font-family="Georgia,serif" font-size="25" fill="#24395d">Vodka Red Bull</text>
+</svg>
