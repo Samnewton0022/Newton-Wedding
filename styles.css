@@ -133,3 +133,9 @@ footer{text-align:center;padding:70px 20px;background:#101e33;color:#f1eee8}
   .invitation-card blockquote{font-size:14px;margin:12px auto 0}
   .seal{width:72px;height:72px;margin-top:12px}
 }
+
+/* Chapter I drink revision: matching lowball vodka sodas with lime */
+.vodka-sodas-sketch .glass-wash{fill:#fffdf8;fill-opacity:.30}
+.vodka-sodas-sketch .ice-wash{fill:#fffdf8;fill-opacity:.48}
+.vodka-sodas-sketch .lime-wash{fill:#c8d9a6;fill-opacity:.34}
+.vodka-sodas-sketch .liquid-lines{stroke-width:1.8;opacity:.34}
