@@ -153,298 +153,109 @@ footer{text-align:center;padding:65px 20px;background:#101f35;color:white}.foote
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.reveal,.invitation{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 
-/* === Invitation redesign: full-screen stationery composition === */
+/* Refined invitation card — built from the V3.6 master */
 .invitation-stage{
-  padding:0;
+  padding:clamp(24px,4vh,48px) 24px;
+  overflow:auto;
   background:
-    radial-gradient(circle at 14% 18%,rgba(239,207,215,.34),transparent 31%),
-    radial-gradient(circle at 86% 82%,rgba(216,225,236,.34),transparent 34%),
-    #fbf8f3;
-  overflow:hidden;
+    radial-gradient(circle at 12% 18%,rgba(237,196,205,.38),transparent 29%),
+    radial-gradient(circle at 88% 82%,rgba(227,207,218,.34),transparent 31%),
+    #f7f1e9;
 }
 .simple-invitation{
-  width:min(980px,100vw);
-  height:min(94vh,980px);
-  min-height:760px;
-  padding:38px 78px 250px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:flex-start;
-  background:linear-gradient(180deg,rgba(255,253,248,.99),rgba(255,252,247,.97));
+  width:min(650px,92vw);
+  min-height:780px;
+  padding:34px 52px 176px;
   border:0;
-  box-shadow:0 18px 70px rgba(31,42,57,.12);
+  box-shadow:0 24px 70px rgba(38,43,54,.17),0 2px 5px rgba(38,43,54,.08);
+  transform-origin:center center;
+  transition:transform .75s cubic-bezier(.2,.72,.22,1),box-shadow .75s ease,opacity .7s ease,filter .7s ease;
+  background:
+    linear-gradient(rgba(255,253,248,.965),rgba(255,253,248,.965)),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='110' height='110'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.55' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.09'/%3E%3C/svg%3E");
 }
 .simple-invitation:before{
-  inset:18px;
-  border:1px solid rgba(185,150,84,.44);
+  inset:13px;
+  border-color:rgba(232,192,203,.52);
 }
 .invite-border{
-  inset:29px;
-  border-color:rgba(239,207,215,.72);
+  inset:23px;
+  border-color:rgba(23,48,82,.11);
 }
 .crest{
-  flex:0 0 auto;
-  width:220px;
-  height:220px;
-  margin:0 auto 10px;
-  padding:26px;
+  width:218px;
+  height:218px;
+  margin-bottom:10px;
   border-width:1.5px;
-  background:transparent;
-  box-shadow:none;
+  background:rgba(255,253,248,.72);
 }
 .crest:before{inset:12px}
+.crest strong{font-size:46px}
 .crest .cross{font-size:17px;margin-bottom:7px}
-.crest strong{font-size:47px}
 .crest>span:not(.cross){font-size:10px;margin:11px 0 7px}
 .crest small{font-size:8px}
 .click-note{
-  margin:0 0 24px;
-  color:#b87787;
-  font-size:10px;
-  letter-spacing:.28em;
-}
-.invitation-copy-block{
-  position:relative;
-  z-index:4;
-  width:min(680px,100%);
-  text-align:center;
-}
-.kicker{
-  margin:0 0 13px;
-  color:#b87787;
-  text-transform:uppercase;
-  letter-spacing:.30em;
-  font-size:9px;
-  font-weight:500;
-}
-.simple-invitation h1{
-  margin:0 0 14px;
-  color:var(--navy);
-  font-size:clamp(58px,6vw,82px);
-  line-height:.98;
-}
-.invite-copy{
-  margin:0;
-  color:#37383d;
-  font-size:22px;
-  line-height:1.38;
-}
-.date{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:2px;
-  margin:17px 0 8px;
-  line-height:1.45;
-}
-.date span{
-  font-size:8px;
-  letter-spacing:.28em;
-}
-.date strong{
-  font-size:34px;
-  line-height:1.1;
-}
-.scripture{
-  margin:8px auto 1px;
-  max-width:570px;
-  font-family:"Cormorant Garamond",serif;
-  font-size:14px;
-  font-style:italic;
-  color:#6d6863;
-}
-.verse{
-  font-size:7px;
-  letter-spacing:.22em;
-}
-.invite-art-wrap{
-  position:absolute;
-  left:32px;
-  right:32px;
-  bottom:25px;
-  height:245px;
-  overflow:hidden;
-  z-index:2;
-  -webkit-mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.2) 9%,#000 32%,#000 100%);
-  mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.2) 9%,#000 32%,#000 100%);
-}
-.invite-art{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center 58%;
-  opacity:.86;
-  mix-blend-mode:multiply;
-  filter:saturate(.88) contrast(.95) brightness(1.04);
-  border:0;
-}
-.embossed-crest{
-  right:54px;
-  bottom:48px;
-  width:96px;
-  height:96px;
-  z-index:5;
-  border:1px solid rgba(255,255,255,.7);
-  box-shadow:
-    inset 1px 1px 2px rgba(255,255,255,.95),
-    inset -1px -1px 2px rgba(100,89,76,.10),
-    1px 1px 1px rgba(100,89,76,.07);
-  color:rgba(255,255,255,.62);
-  text-shadow:1px 1px 0 rgba(120,110,96,.12);
-  background:rgba(255,253,248,.10);
-  display:flex;
-  flex-direction:column;
-  gap:3px;
-}
-.embossed-crest span{font-size:10px}
-.embossed-crest strong{font-size:20px;font-weight:500}
-
-@media(max-width:800px){
-  .invitation-stage{overflow:auto;align-items:start}
-  .simple-invitation{
-    width:100%;
-    height:auto;
-    min-height:100svh;
-    padding:28px 24px 190px;
-    box-shadow:none;
-  }
-  .simple-invitation:before{inset:10px}
-  .invite-border{inset:18px}
-  .crest{width:184px;height:184px;padding:21px}
-  .crest strong{font-size:39px}
-  .click-note{font-size:8px;letter-spacing:.22em;margin-bottom:19px}
-  .simple-invitation h1{font-size:50px}
-  .invite-copy{font-size:18px}
-  .date strong{font-size:27px}
-  .scripture{font-size:12px;padding:0 12px}
-  .invite-art-wrap{left:18px;right:18px;bottom:16px;height:176px}
-  .embossed-crest{width:70px;height:70px;right:29px;bottom:29px}
-}
-
-@media(max-height:820px) and (min-width:801px){
-  .simple-invitation{
-    height:100vh;
-    min-height:700px;
-    padding-top:22px;
-    padding-bottom:215px;
-  }
-  .crest{width:185px;height:185px;padding:21px;margin-bottom:6px}
-  .crest strong{font-size:40px}
-  .click-note{margin-bottom:15px;font-size:8px}
-  .simple-invitation h1{font-size:57px;margin-bottom:9px}
-  .invite-copy{font-size:19px}
-  .date{margin:12px 0 5px}
-  .date strong{font-size:29px}
-  .scripture{margin-top:4px;font-size:12px}
-  .invite-art-wrap{height:205px}
-}
-
-/* Invitation refinement pass — July 2026 */
-.invitation-stage{
-  background:
-    radial-gradient(ellipse at 8% 10%,rgba(239,207,215,.45),transparent 34%),
-    radial-gradient(ellipse at 92% 88%,rgba(219,228,238,.42),transparent 36%),
-    radial-gradient(ellipse at 75% 12%,rgba(255,255,255,.72),transparent 30%),
-    #faf6f0;
-}
-.linen{
-  opacity:.62;
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='4' seed='7'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.10'/%3E%3C/svg%3E"),
-    repeating-linear-gradient(0deg,rgba(125,105,82,.018) 0,rgba(125,105,82,.018) 1px,transparent 1px,transparent 4px),
-    repeating-linear-gradient(90deg,rgba(125,105,82,.014) 0,rgba(125,105,82,.014) 1px,transparent 1px,transparent 5px);
-}
-.simple-invitation{
-  width:min(980px,100vw);
-  height:min(98vh,1080px);
-  min-height:830px;
-  padding:42px 82px 278px;
-  border:0;
-  background:
-    radial-gradient(circle at 8% 8%,rgba(239,207,215,.13),transparent 25%),
-    radial-gradient(circle at 92% 90%,rgba(218,228,238,.12),transparent 27%),
-    linear-gradient(180deg,rgba(255,254,250,.995),rgba(255,252,247,.985));
-  box-shadow:0 24px 78px rgba(31,42,57,.14);
-  transition:transform 1.05s cubic-bezier(.22,.72,.18,1),opacity .82s ease,box-shadow .75s ease;
-}
-/* Remove the former outer gold rule; retain one quiet inner border. */
-.simple-invitation:before{display:none}
-.invite-border{
-  inset:24px;
-  border:1px solid rgba(23,48,82,.12);
-}
-.invitation-stage.open .simple-invitation{
-  transform:translateY(-20px) scale(.992);
-  opacity:0;
-  box-shadow:0 42px 95px rgba(31,42,57,.22);
-}
-.click-note{
-  margin-bottom:27px;
-  color:rgba(184,119,135,.78);
+  margin:0 auto 24px;
+  color:#c48996;
   font-size:8px;
   font-weight:400;
-  letter-spacing:.30em;
+  letter-spacing:.24em;
 }
-.scripture{
-  margin-top:15px;
-  margin-bottom:3px;
-}
-.verse{display:block;margin-top:2px}
-.invite-art-wrap{
-  left:0;
-  right:0;
-  bottom:0;
-  height:265px;
-  -webkit-mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.12) 8%,rgba(0,0,0,.72) 25%,#000 43%,#000 100%);
-  mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.12) 8%,rgba(0,0,0,.72) 25%,#000 43%,#000 100%);
-}
+.kicker{margin:0 0 10px;font-size:14px}
+.simple-invitation h1{font-size:59px;margin:7px 0 13px}
+.invite-copy{font-size:20px;margin:0}
+.date{margin:18px 0 0}
+.date strong{font-size:28px}
+.simple-invitation blockquote{margin:19px auto 2px;font-size:15px}
+.verse{font-size:11px}
 .invite-art{
-  inset:-4px -8px -8px;
-  width:calc(100% + 16px);
-  height:calc(100% + 12px);
-  object-position:center 59%;
-  opacity:.78;
-  filter:saturate(.72) contrast(.90) brightness(1.08);
-  transform:scale(1.025);
+  left:4%;
+  right:4%;
+  bottom:15px;
+  width:92%;
+  height:154px;
+  opacity:.82;
+  border-top:0;
+  object-position:center 58%;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.65) 18%,#000 36%,#000 100%);
+  mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.65) 18%,#000 36%,#000 100%);
 }
-/* The artwork already contains the cream blind-embossed crest. */
-.embossed-crest{display:none!important}
+.invitation-stage.open .simple-invitation{
+  transform:translateY(-18px) scale(1.012);
+  box-shadow:0 42px 95px rgba(38,43,54,.22);
+  opacity:0;
+  filter:blur(2px);
+}
 .editorial-hero.hero-awaiting .portrait-frame,
-.editorial-hero.hero-awaiting .hero-copy{opacity:0;transform:translateY(22px);filter:blur(6px)}
-.editorial-hero.hero-reveal .portrait-frame{animation:heroPhotoReveal 1.35s cubic-bezier(.18,.72,.2,1) both}
-.editorial-hero.hero-reveal .hero-copy{animation:heroCopyReveal 1s ease .24s both}
-@keyframes heroPhotoReveal{
-  from{opacity:0;transform:translateY(26px) scale(.985);filter:blur(7px)}
-  to{opacity:1;transform:none;filter:none}
-}
-@keyframes heroCopyReveal{
-  from{opacity:0;transform:translateY(18px);filter:blur(3px)}
-  to{opacity:1;transform:none;filter:none}
+.editorial-hero.hero-awaiting .hero-copy{opacity:0;transform:translateY(22px)}
+.editorial-hero.hero-reveal .portrait-frame{animation:heroCardReveal 1.25s cubic-bezier(.18,.72,.2,1) both}
+.editorial-hero.hero-reveal .hero-copy{animation:heroCardReveal 1s ease .2s both}
+@keyframes heroCardReveal{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media(max-height:850px) and (min-width:801px){
+  .invitation-stage{padding:20px}
+  .simple-invitation{width:min(600px,88vw);min-height:720px;padding:25px 48px 150px}
+  .crest{width:190px;height:190px}
+  .crest strong{font-size:41px}
+  .click-note{margin-bottom:18px}
+  .simple-invitation h1{font-size:53px}
+  .invite-copy{font-size:18px}
+  .date{margin-top:13px}
+  .simple-invitation blockquote{margin-top:12px}
+  .invite-art{height:135px}
 }
 @media(max-width:800px){
-  .simple-invitation{
-    min-height:850px;
-    padding:30px 24px 205px;
-  }
-  .invite-border{inset:14px}
-  .click-note{font-size:7px;letter-spacing:.24em;margin-bottom:20px}
-  .scripture{margin-top:10px}
-  .invite-art-wrap{height:188px}
-}
-@media(max-height:820px) and (min-width:801px){
-  .simple-invitation{
-    height:100vh;
-    min-height:740px;
-    padding-top:20px;
-    padding-bottom:230px;
-  }
-  .invite-art-wrap{height:220px}
-  .scripture{margin-top:8px}
+  .invitation-stage{padding:18px 10px;align-items:center}
+  .simple-invitation{width:min(440px,96vw);min-height:700px;padding:25px 24px 154px}
+  .crest{width:176px;height:176px;padding:18px}
+  .crest strong{font-size:37px}
+  .simple-invitation h1{font-size:44px}
+  .kicker{font-size:12px}
+  .invite-copy{font-size:16px}
+  .date strong{font-size:24px}
+  .simple-invitation blockquote{font-size:13px;margin-top:12px}
+  .invite-art{height:128px;bottom:13px}
 }
 @media(prefers-reduced-motion:reduce){
-  .simple-invitation,.editorial-hero.hero-reveal .portrait-frame,.editorial-hero.hero-reveal .hero-copy{animation:none!important;transition:none!important}
-  .editorial-hero.hero-awaiting .portrait-frame,.editorial-hero.hero-awaiting .hero-copy{opacity:1;transform:none;filter:none}
+  .invitation-stage.open .simple-invitation{transform:none;filter:none}
+  .editorial-hero.hero-reveal .portrait-frame,.editorial-hero.hero-reveal .hero-copy{animation:none!important;opacity:1;transform:none}
 }

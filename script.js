@@ -1,17 +1,17 @@
 const stage = document.getElementById("invitationStage");
 const begin = document.getElementById("beginButton");
 function openInvitation(){
-  const hero = document.getElementById("editorialHero");
+  const hero=document.getElementById("editorialHero");
   stage.classList.add("open");
-  setTimeout(() => {
-    stage.style.display = "none";
+  setTimeout(()=>{
+    stage.style.display="none";
     window.scrollTo({top:0,behavior:"auto"});
     if(hero){
       hero.classList.remove("hero-awaiting");
       void hero.offsetWidth;
       hero.classList.add("hero-reveal");
     }
-  }, 1050);
+  },900);
 }
 begin.addEventListener("click",openInvitation);
 
