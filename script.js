@@ -1,3 +1,5 @@
+document.documentElement.style.overflowY = "auto";
+document.body.style.overflowY = "auto";
 const W = window.WEDDING;
 const $ = s => document.querySelector(s);
 const set = (s,v) => { const el=$(s); if(el) el.textContent=v; };
@@ -31,10 +33,10 @@ $("#openInvitation").addEventListener("click",()=>{
   $("#invitation").classList.add("opening");
   setTimeout(()=>$("#invitation").classList.add("opened"),650);
   $(".site-header").classList.add("visible");
-  document.body.style.overflow="";
+  
   setTimeout(()=>$("#invitation").remove(),1000);
 });
-document.body.style.overflow="hidden";
+
 
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("in-view")}),{threshold:.13});
 document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));

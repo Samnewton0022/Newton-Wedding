@@ -173,3 +173,39 @@
   .wax-button:before{inset:13px}
   .wax-button span{margin-top:39px;font-size:.58rem}
 }
+
+
+/* Definitive navigation fix */
+html, body {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+body {
+  overflow-y: auto !important;
+}
+.invitation-screen {
+  overflow-y: scroll !important;
+  overscroll-behavior: contain;
+  display: block !important;
+  padding: 20px 12px 110px !important;
+}
+.envelope-shell {
+  width: min(820px, 96vw);
+  margin: 0 auto !important;
+  padding: 24px 0 40px !important;
+}
+.envelope-wrap {
+  min-height: 0 !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+.wax-button {
+  position: sticky !important;
+  bottom: 18px;
+  z-index: 200;
+}
+@media (max-width: 650px), (max-height: 820px) {
+  .invitation-screen { padding-bottom: 120px !important; }
+  .envelope-shell { padding-top: 10px !important; }
+  .envelope-wrap { padding: 20px 14px 28px !important; }
+}
