@@ -77,6 +77,8 @@ img,svg{display:block;max-width:100%}
 .drink-illustration,
 .hotel-illustration {
     background: transparent;
+    padding: 25px;
+    margin-left: 40px;
 }
 .vodka-sodas-realistic{display:block;width:min(100%,620px);height:auto;object-fit:contain;filter:drop-shadow(0 18px 18px rgba(20,36,61,.10))}
 .vodka-sodas-sketch{overflow:visible}
@@ -152,5 +154,5 @@ footer{text-align:center;padding:70px 20px;background:#101e33;color:#f1eee8}
     width:125%;
     max-width:900px;
     height:auto;
-    transform:translateX(20px);
+    transform:none;
 }
