@@ -1,13 +1,39 @@
-# Sam & Madison Wedding Website — Invitation Revision 1
+# Sam & Madison Wedding Website — Version 3
 
-This revision uses Version 3.3 as the foundation and changes only the invitation crest:
+This is a complete static website ready for GitHub Pages.
 
-- Enlarged both gold circles proportionally
-- Added more space between “THE NEWTONS” and the Roman-numeral date
-- Slightly refined the date size and letter spacing
-- Kept the Roman numerals fully inside the inner gold circle
+## Upload to GitHub
 
-All other website styling, content, and behavior remain unchanged.
+1. Open your `Newton-Wedding` repository.
+2. Delete or replace the existing website files.
+3. Upload everything inside this folder:
+   - `index.html`
+   - `styles.css`
+   - `script.js`
+   - the entire `assets` folder
+4. Commit the changes.
+5. Open your GitHub Pages link and hard refresh:
+   - Mac: Command + Shift + R
+   - Windows: Control + Shift + R
 
-## Upload
-Upload `index.html`, `styles.css`, `script.js`, and the full `assets` folder to the repository root, then commit and hard-refresh the live site.
+## Important
+
+The engagement photograph is already included at:
+
+`assets/engagement.jpg`
+
+## Reset the opening invitation
+
+The invitation opens once per browser tab. To see the opening again:
+- close the tab and reopen it, or
+- open the site in a private/incognito window.
+
+## Next recommended update
+
+Version 3.1 can add:
+- full RSVP form connected to Google Sheets or Formspree
+- hotel room block
+- registry links
+- FAQ
+- wedding party
+- expanded gallery

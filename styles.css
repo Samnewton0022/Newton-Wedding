@@ -27,13 +27,13 @@ img,svg{display:block;max-width:100%}
 .invitation-card:before,.invitation-card:after{content:"";position:absolute;inset:10px;border:1px solid rgba(185,151,91,.22);pointer-events:none}
 .invitation-card:after{inset:17px;border-color:rgba(232,201,206,.35)}
 .paper-grain{position:absolute;inset:0;opacity:.22;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E")}
-.crest{position:relative;width:236px;height:236px;margin:0 auto 25px;border:1px solid var(--gold);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--navy)}
-.crest:before{content:"";position:absolute;inset:10px;border:1px solid rgba(185,151,91,.45);border-radius:50%}
-.crest .cross{font-size:18px;color:var(--gold);margin-bottom:2px}
-.crest strong{font-family:"Cormorant Garamond",serif;font-size:47px;font-weight:500;letter-spacing:.02em;line-height:1}
+.crest{position:relative;width:232px;height:232px;margin:0 auto 25px;border:1.35px solid var(--gold);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--navy);padding:31px 28px 27px}
+.crest:before{content:"";position:absolute;inset:10px;border:1px solid rgba(185,151,91,.48);border-radius:50%;pointer-events:none}
+.crest .cross{font-size:17px;line-height:1;color:var(--gold);margin:0 0 10px}
+.crest strong{font-family:"Cormorant Garamond",serif;font-size:49px;font-weight:500;letter-spacing:.025em;line-height:.88;white-space:nowrap}
 .crest strong i{font-weight:400;color:var(--gold)}
-.crest span:not(.cross){font-size:10px;letter-spacing:.3em;margin:12px 0 8px}
-.crest small{font-size:8.5px;letter-spacing:.17em;white-space:nowrap}
+.crest span:not(.cross){font-size:9.5px;line-height:1;letter-spacing:.28em;margin:17px 0 12px;white-space:nowrap}
+.crest small{display:block;font-size:7.6px;line-height:1;letter-spacing:.16em;white-space:nowrap}
 .kicker,.eyebrow,.chapter,.time{text-transform:uppercase;letter-spacing:.27em;font-size:11px;font-weight:500}
 .invitation-card h1{font-size:clamp(54px,7vw,76px);color:var(--navy);margin:7px 0 14px}
 .invitation-card h1 em,.hero h2 em{font-weight:400;color:var(--gold)}
@@ -100,7 +100,7 @@ footer{text-align:center;padding:70px 20px;background:#101e33;color:#f1eee8}
 .footer-crest small{letter-spacing:.2em;font-size:8px}.footer-crest+p{font-size:10px;letter-spacing:.12em;color:#aeb7c7}
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}.reveal.in-view{opacity:1;transform:none}
 @media(max-width:800px){
-  .invitation-card{min-height:auto;padding:34px 24px 28px}.crest{width:184px;height:184px}.crest strong{font-size:38px}.invitation-card h1{font-size:48px}.invite-copy{font-size:18px}.invitation-card blockquote{font-size:15px}.seal{width:78px;height:78px}
+  .invitation-card{min-height:auto;padding:34px 24px 28px}.crest{width:176px;height:176px;padding:23px 20px 20px}.crest:before{inset:8px}.crest .cross{font-size:14px;margin-bottom:7px}.crest strong{font-size:38px}.crest span:not(.cross){font-size:7.5px;margin:12px 0 9px}.crest small{font-size:6.2px;letter-spacing:.12em}.invitation-card h1{font-size:48px}.invite-copy{font-size:18px}.invitation-card blockquote{font-size:15px}.seal{width:78px;height:78px}
   .site-header{height:68px;padding:0 20px}.menu-button{display:block}.site-header nav{display:none;position:absolute;top:68px;left:0;right:0;background:rgba(248,243,234,.98);color:var(--navy);padding:26px;flex-direction:column;gap:20px}.site-header nav.open{display:flex}
   .hero{min-height:90vh}.hero-photo{background-position:center 40%}.hero-copy{padding:0 24px 60px}.hero-copy h2{font-size:66px}
   .editorial-intro{padding:100px 22px}.story-row,.story-row.reverse{grid-template-columns:1fr;min-height:auto}.story-row.reverse .story-copy{order:0}.story-copy{padding:80px 28px}.illustration{padding:45px;min-height:470px}.story-copy h2{font-size:56px}
@@ -112,8 +112,12 @@ footer{text-align:center;padding:70px 20px;background:#101e33;color:#f1eee8}
 @media(max-height:820px) and (min-width:801px){
   .opening{padding:18px}
   .invitation-card{min-height:0;padding:28px 48px 24px}
-  .crest{width:170px;height:170px;margin-bottom:15px}
-  .crest strong{font-size:36px}
+  .crest{width:180px;height:180px;margin-bottom:15px;padding:23px 20px 20px}
+  .crest:before{inset:8px}
+  .crest .cross{font-size:14px;margin-bottom:7px}
+  .crest strong{font-size:39px}
+  .crest span:not(.cross){font-size:7.6px;margin:12px 0 9px}
+  .crest small{font-size:6.3px;letter-spacing:.12em}
   .invitation-card h1{font-size:52px;margin:3px 0 8px}
   .invite-copy{font-size:17px;line-height:1.35}
   .date-lockup{margin:14px 0}
