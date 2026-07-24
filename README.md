@@ -1,14 +1,39 @@
-# Newton Wedding — Refined Invitation Card
+# Sam & Madison Wedding Website — Version 3
 
-This build is based directly on the uploaded V3.6 master.
+This is a complete static website ready for GitHub Pages.
 
-Invitation-only changes:
-- Keeps the invitation as a centered card instead of filling the entire page
-- Preserves the stronger typography and larger crest
-- Keeps “Click the crest to begin our story” beneath the crest
-- Removes the extra HTML crest from the lower-right corner
-- Softens and blends the Don CeSar watercolor into the paper
-- Adds a subtle paper lift before the invitation fades
-- Reveals the existing hero after the invitation closes
+## Upload to GitHub
 
-The remainder of the V3.6 website is unchanged.
+1. Open your `Newton-Wedding` repository.
+2. Delete or replace the existing website files.
+3. Upload everything inside this folder:
+   - `index.html`
+   - `styles.css`
+   - `script.js`
+   - the entire `assets` folder
+4. Commit the changes.
+5. Open your GitHub Pages link and hard refresh:
+   - Mac: Command + Shift + R
+   - Windows: Control + Shift + R
+
+## Important
+
+The engagement photograph is already included at:
+
+`assets/engagement.jpg`
+
+## Reset the opening invitation
+
+The invitation opens once per browser tab. To see the opening again:
+- close the tab and reopen it, or
+- open the site in a private/incognito window.
+
+## Next recommended update
+
+Version 3.1 can add:
+- full RSVP form connected to Google Sheets or Formspree
+- hotel room block
+- registry links
+- FAQ
+- wedding party
+- expanded gallery
