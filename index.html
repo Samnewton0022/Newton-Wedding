@@ -3,43 +3,43 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#173052">
+  <meta name="theme-color" content="#193250">
+  <meta name="description" content="The wedding of Sam and Madison — September 25, 2027 in Tampa, Florida.">
   <title>Sam & Madison | September 25, 2027</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&family=Italiana&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <div class="invitation-stage" id="invitationStage">
-    <div class="linen"></div>
-    <article class="simple-invitation">
-      <div class="invite-border"></div>
-
-      <button class="crest crest-button" id="beginButton" type="button" aria-label="Click the crest to enter the wedding website">
-        <span class="cross">✝</span>
-        <strong>S <i>&</i> M</strong>
-        <span>THE NEWTONS</span>
-        <small>IX • XXV • MMXXVII</small>
-      </button>
-
-      <p class="click-note">Click the crest to begin our story</p>
+<body class="is-locked">
+  <div class="invitation-stage" id="invitationStage" aria-label="Wedding invitation">
+    <div class="linen" aria-hidden="true"></div>
+    <article class="invitation-card">
+      <div class="invite-rule" aria-hidden="true"></div>
       <p class="kicker">Together with their families</p>
       <h1>Sam <em>&</em> Madison</h1>
       <p class="invite-copy">joyfully invite you to celebrate<br>the Sacrament of Holy Matrimony</p>
-      <p class="date">Saturday<br><strong>September 25, 2027</strong><br>Tampa, Florida</p>
+      <p class="date"><span>Saturday</span><strong>September 25, 2027</strong><span>Tampa, Florida</span></p>
+
+      <button class="crest crest-button" id="beginButton" type="button" aria-label="Click the crest to begin our story">
+        <span class="cross">✝</span>
+        <strong>S <i>&</i> M</strong>
+        <span class="newtons">THE NEWTONS</span>
+        <small>IX • XXV • MMXXVII</small>
+      </button>
+      <p class="click-note">Click the crest to begin our story</p>
+
       <blockquote>“And now these three remain: faith, hope and love. But the greatest of these is love.”</blockquote>
       <small class="verse">1 Corinthians 13:13</small>
-
-      <img src="assets/don-cesar-watercolor.jpg" alt="Watercolor illustration of The Don CeSar" class="invite-art">
-      <div class="embossed-crest">S&amp;M</div>
+      <img src="assets/don-cesar.svg" alt="Watercolor-style illustration of The Don CeSar" class="invite-art">
+      <div class="blind-crest" aria-hidden="true">S&amp;M</div>
     </article>
   </div>
 
   <header class="site-header">
-    <a class="brand" href="#home">S <span>&</span> M</a>
-    <button class="menu-button" id="menuButton">Menu</button>
-    <nav id="siteNav">
+    <a class="wordmark" href="#home">Sam &amp; Madison</a>
+    <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="siteNav">Menu</button>
+    <nav id="siteNav" aria-label="Primary navigation">
       <a href="#story">Our Story</a>
       <a href="#wedding-day">Wedding Day</a>
       <a href="#travel">Travel</a>
@@ -48,48 +48,39 @@
   </header>
 
   <main id="home">
-    <section class="editorial-hero">
-      <div class="hero-copy reveal">
+    <section class="editorial-hero hero-awaiting" id="editorialHero">
+      <div class="hero-copy">
         <p class="eyebrow">Welcome to our wedding</p>
         <h2>Sam <em>&</em><br>Madison</h2>
-        <div class="flourish">— ✦ —</div>
+        <div class="flourish" aria-hidden="true">— ✦ —</div>
         <p class="hero-date">September 25, 2027<br>Tampa, Florida</p>
       </div>
-      <figure class="portrait-frame reveal">
-        <div class="photo-mat">
-          <img src="assets/engagement.jpg" alt="Sam and Madison">
-        </div>
+      <figure class="portrait-frame">
+        <div class="photo-mat"><img src="assets/engagement.jpg" alt="Sam and Madison smiling together"></div>
+        <figcaption>Engaged March 28, 2026</figcaption>
       </figure>
-      <div class="embossed-page-mark">S&amp;M</div>
     </section>
 
-    <section class="countdown-section reveal">
-      <p class="eyebrow">Counting down to our wedding</p>
+    <section class="countdown-section reveal" aria-label="Wedding countdown">
+      <p class="eyebrow">Counting down to forever</p>
       <div class="countdown" id="countdown"></div>
     </section>
 
     <section class="story" id="story">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Our Story</p>
-        <h2>A love story in chapters</h2>
-      </div>
+      <div class="section-heading reveal"><p class="eyebrow">Our Story</p><h2>A love story in chapters</h2></div>
 
       <article class="chapter reveal">
-        <div class="chapter-art">
-          <img src="assets/drinks-watercolor.jpg" alt="Watercolor illustration of a Vodka Red Bull and vodka soda with lime">
-        </div>
+        <div class="chapter-art blush-panel"><img src="assets/vodka-sodas.svg" alt="Two elegant vodka sodas with ice and lime"></div>
         <div class="chapter-copy">
           <p class="chapter-number">Chapter One</p>
           <h3>Where It All Began</h3>
           <p class="place">The Gin Mill · Charlotte, North Carolina</p>
-          <p>One ordinary night, one unforgettable meeting, a Vodka Red Bull and a vodka soda with lime later—the rest became our favorite story.</p>
+          <p>One ordinary night, one unforgettable meeting, and two drinks later, the rest became our favorite story.</p>
         </div>
       </article>
 
       <article class="chapter reverse reveal">
-        <div class="chapter-art don-art">
-          <img src="assets/don-cesar-watercolor.jpg" alt="Watercolor illustration of The Don CeSar with sky, palms and beach">
-        </div>
+        <div class="chapter-art blue-panel"><img src="assets/don-cesar.svg" alt="The Don CeSar, beach, palms and Gulf water"></div>
         <div class="chapter-copy">
           <p class="chapter-number">Chapter Two</p>
           <h3>The Easiest Yes</h3>
@@ -100,20 +91,17 @@
     </section>
 
     <section class="wedding-day" id="wedding-day">
-      <div class="section-heading light reveal">
-        <p class="eyebrow">Chapter Three</p>
-        <h2>The Wedding Day</h2>
-      </div>
+      <div class="section-heading light reveal"><p class="eyebrow">Chapter Three</p><h2>The Wedding Day</h2></div>
       <div class="event-grid">
         <article class="event-card reveal">
-          <span class="event-symbol">✝</span>
+          <div class="venue-art"><img src="assets/sacred-heart.svg" alt="Sacred Heart Catholic Church illustration"></div>
           <p class="event-time">2:00 PM</p>
           <h3>Sacred Heart Catholic Church</h3>
           <p>Tampa, Florida</p>
           <a href="https://maps.google.com/?q=Sacred+Heart+Catholic+Church+Tampa+Florida" target="_blank" rel="noopener">View directions</a>
         </article>
         <article class="event-card reveal">
-          <span class="event-symbol">♕</span>
+          <div class="venue-art"><img src="assets/carrollwood.svg" alt="Carrollwood Country Club illustration"></div>
           <p class="event-time">5:00 PM</p>
           <h3>Carrollwood Country Club</h3>
           <p>Tampa, Florida</p>
@@ -123,19 +111,17 @@
     </section>
 
     <section class="travel" id="travel">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Chapter Four</p>
-        <h2>Celebrate With Us</h2>
-      </div>
+      <div class="section-heading reveal"><p class="eyebrow">Chapter Four</p><h2>Celebrate With Us</h2></div>
       <div class="travel-grid reveal">
         <div><span>Airport</span><strong>Tampa International Airport</strong></div>
-        <div><span>Weekend</span><strong>September 24–26, 2027</strong></div>
-        <div><span>Hotel details</span><strong>Coming soon</strong></div>
+        <div><span>Wedding Weekend</span><strong>September 24–26, 2027</strong></div>
+        <div><span>Hotel Details</span><strong>Coming soon</strong></div>
       </div>
     </section>
 
     <section class="rsvp" id="rsvp">
       <div class="rsvp-card reveal">
+        <img src="assets/floral-sprig.svg" alt="" class="sprig" aria-hidden="true">
         <p class="script">Kindly reply</p>
         <h2>RSVP</h2>
         <p>Formal online RSVP will open after invitations are mailed.</p>
@@ -145,14 +131,12 @@
   </main>
 
   <footer>
-    <div class="footer-crest">
-      <span>✝</span>
-      <strong>S & M</strong>
-      <small>IX • XXV • MMXXVII</small>
-    </div>
-    <p>Crafted with love for the future Newtons.</p>
+    <img src="assets/floral-sprig.svg" alt="" class="footer-sprig" aria-hidden="true">
+    <p class="closing">The adventure begins September 25, 2027.</p>
+    <strong>Sam &amp; Madison</strong>
+    <span>The Newtons</span>
+    <div class="footer-crest" aria-hidden="true"><b>✝</b><em>S &amp; M</em><small>IX • XXV • MMXXVII</small></div>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
