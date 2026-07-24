@@ -64,3 +64,19 @@ $("#rsvpForm").addEventListener("submit", async e=>{
   }
   e.target.hidden=true; $("#rsvpThanks").hidden=false;
 });
+
+
+/* Accessibility fallback: allow keyboard opening and prevent a permanently locked page */
+const invitationButton = document.querySelector("#openInvitation");
+if (invitationButton) {
+  invitationButton.addEventListener("keydown", event => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      invitationButton.click();
+    }
+  });
+}
+window.setTimeout(() => {
+  const invitation = document.querySelector("#invitation");
+  if (!invitation) document.body.style.overflow = "";
+}, 1500);

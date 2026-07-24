@@ -137,3 +137,39 @@
   .wax-button{width:98px;height:98px}
   .wax-button span{margin-top:44px}
 }
+
+
+/* Mobile and short-screen invitation accessibility fix */
+.invitation-screen{
+  overflow-y:auto;
+  overflow-x:hidden;
+  align-items:start;
+  justify-items:center;
+  -webkit-overflow-scrolling:touch;
+}
+.envelope-shell{
+  margin:auto;
+  padding:48px 0 32px;
+}
+.envelope-wrap{
+  height:auto;
+  max-height:none;
+}
+.wax-button{
+  flex:0 0 auto;
+  touch-action:manipulation;
+}
+@media (max-height:820px){
+  .envelope-shell{padding:24px 0}
+  .envelope-wrap{min-height:auto}
+  .crest{padding:10px 24px}
+  .monogram{font-size:2.1rem}
+  .crest-n{font-size:1.9rem}
+  .crest p{margin:4px 0;font-size:1.05rem}
+  .invitation-copy{margin:8px 0}
+  .invitation-date{font-size:1.45rem;margin:4px 0}
+  .saint-quote,.scripture-quote{margin:7px auto!important}
+  .wax-button{width:88px;height:88px}
+  .wax-button:before{inset:13px}
+  .wax-button span{margin-top:39px;font-size:.58rem}
+}
