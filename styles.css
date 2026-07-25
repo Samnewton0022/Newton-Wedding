@@ -128,11 +128,11 @@ footer{text-align:center;padding:70px 20px;background:#101e33;color:#f1eee8}
   .invitation-card{min-height:0;padding:28px 48px 24px}
   .crest{width:180px;height:180px;margin-bottom:15px;padding:23px 20px 20px}
   .crest:before{inset:8px}
-  .crest .cross{
-    display:block;
-    width:14px;
-    height:20px;
-    margin:0 auto 7px;
+  .crest .cross {
+    display: block;
+    width: 14px;
+    height: 20px;
+    margin: -8px auto 15px;
 }
   .crest .cross svg{
     display:block;
