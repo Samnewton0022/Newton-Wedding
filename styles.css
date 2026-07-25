@@ -284,12 +284,14 @@ footer{text-align:center;padding:70px 20px;background:#101e33;color:#f1eee8}
 }
 
 .finale-overlay{
-    background: linear-gradient(
+     position: absolute;
+  inset: 40px 4vw;
+  background: linear-gradient(
     to bottom,
-    rgba(20,36,61,.12) 0%,
-    rgba(20,36,61,.22) 45%,
-    rgba(20,36,61,.55) 100%
-);
+    rgba(20, 36, 61, 0.12) 0%,
+    rgba(20, 36, 61, 0.22) 45%,
+    rgba(20, 36, 61, 0.55) 100%
+  );
 }
 .finale-copy{
     position:relative;
