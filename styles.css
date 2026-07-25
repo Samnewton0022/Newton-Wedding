@@ -128,7 +128,24 @@ footer{text-align:center;padding:70px 20px;background:#101e33;color:#f1eee8}
   .invitation-card{min-height:0;padding:28px 48px 24px}
   .crest{width:180px;height:180px;margin-bottom:15px;padding:23px 20px 20px}
   .crest:before{inset:8px}
-  .crest .cross{font-size:14px;margin-bottom:7px}
+  .crest .cross{
+    display:block;
+    width:14px;
+    height:20px;
+    margin:0 auto 7px;
+}
+  .crest .cross svg{
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+.crest .cross path{
+    fill:none;
+    stroke:currentColor;
+    stroke-width:1.4;
+    stroke-linecap:round;
+}
   .crest strong{font-size:39px}
   .crest span:not(.cross){font-size:7.6px;margin:12px 0 9px}
   .crest small{font-size:6.3px;letter-spacing:.12em}
@@ -198,33 +215,25 @@ footer{text-align:center;padding:70px 20px;background:#101e33;color:#f1eee8}
         font-size: clamp(48px, 14vw, 68px);
     }
 .crest .cross {
-    position: relative;
     display: block;
-    width: 12px;
-    height: 18px;
+    width: 14px;
+    height: 20px;
     margin: 0 auto 10px;
-    font-size: 0;
+    color: currentColor;
 }
 
-.crest .cross::before,
-.crest .cross::after {
-    content: "";
-    position: absolute;
-    background: currentColor;
+.crest .cross svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
 }
 
-.crest .cross::before {
-    width: 1px;
-    height: 18px;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
+.crest .cross path {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.4;
+    stroke-linecap: round;
 }
 
-.crest .cross::after {
-    width: 10px;
-    height: 1px;
-    left: 50%;
-    top: 6px;
-    transform: translateX(-50%);
-}
+  
