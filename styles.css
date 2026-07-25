@@ -266,9 +266,13 @@ footer{text-align:center;padding:70px 20px;background:#101e33;color:#f1eee8}
 }
 
 .finale-photo{
-     background-image:url("assets/cathedral.jpeg");
-    background-position:center 35%;
+    position:absolute;
+    inset:40px 4vw;
+    background-image:url("assets/cathedral.jpeg");
     background-size:cover;
+    background-position:center;
+    border:1px solid var(--gold);
+    box-shadow:0 24px 70px rgba(20,36,61,.12);
 }
 
 .finale-photo::after{
@@ -286,6 +290,7 @@ footer{text-align:center;padding:70px 20px;background:#101e33;color:#f1eee8}
     rgba(20,36,61,.22) 45%,
     rgba(20,36,61,.55) 100%
 );
+}
 .finale-copy{
     position:relative;
     z-index:2;
