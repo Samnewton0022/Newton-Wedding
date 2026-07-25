@@ -309,12 +309,13 @@ footer{text-align:center;padding:70px 20px;background:#101e33;color:#f1eee8}
 
 .finale-copy .script{
     margin:0 0 18px;
-    color:#f0ccd1;
+    color:var(--ink);
 }
 
 .finale-copy h2{
     margin:0 0 28px;
     font-size:clamp(58px,8vw,110px);
+    color:var(--ink);
 }
 
 .finale-copy p:last-child{
