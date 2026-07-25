@@ -80,7 +80,13 @@ img,svg{display:block;max-width:100%}
     padding: 25px;
     margin-left: 40px;
 }
-.vodka-sodas-realistic{display:block;width:min(100%,620px);height:auto;object-fit:contain;filter:drop-shadow(0 18px 18px rgba(20,36,61,.10))}
+.vodka-sodas-realistic{
+    display:block;
+    width:min(100%,700px);
+    height:auto;
+    object-fit:contain;
+    filter:drop-shadow(0 18px 24px rgba(20,36,61,.10));
+} 
 .vodka-sodas-sketch{overflow:visible}
 .vodka-sodas-sketch .glass-lines{stroke-width:3.2}
 .vodka-sodas-sketch .ice-lines{stroke-width:2.1;opacity:.66}
