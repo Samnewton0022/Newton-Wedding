@@ -315,7 +315,7 @@ footer{text-align:center;padding:70px 20px;background:#101e33;color:#f1eee8}
 .finale-copy h2{
     margin:0 0 28px;
     font-size:clamp(58px,8vw,110px);
-    color:var(--ink);
+    color:var(--navy);
 }
 
 .finale-copy p:last-child{
