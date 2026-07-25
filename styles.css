@@ -349,3 +349,7 @@ body.loading{overflow:hidden}
 .button,.text-link,.promise-details a,.celebration-details a{transition:transform .3s ease,opacity .3s ease}.button:hover{transform:translateY(-3px)}.text-link:hover,.promise-details a:hover,.celebration-details a:hover{opacity:.68}.site-header nav a{position:relative}.site-header nav a:after{content:"";position:absolute;left:0;right:100%;bottom:-7px;height:1px;background:var(--gold);transition:right .3s ease}.site-header nav a:hover:after{right:0}.footer-crest .cross{display:block;width:16px;height:24px;margin:0 auto 8px;color:var(--gold)}.footer-crest .cross svg{width:100%;height:100%}.footer-crest .cross path{fill:none;stroke:currentColor;stroke-width:1.4}
 @media(max-width:800px){.loader-date{font-size:8px}.chapter-number{font-size:230px;top:22%;transform:none}.promise{grid-template-columns:1fr;min-height:auto}.promise-art{min-height:480px;margin:16px}.promise-copy{padding:75px 28px}.celebration-chapter{padding:95px 22px}.celebration-inner{grid-template-columns:1fr}.celebration-logo{max-width:520px;margin:auto}.art-caption{margin-top:32px}}
 @media(prefers-reduced-motion:reduce){.loader-step{animation:none}.loader-step:first-child{opacity:1}}
+/* Hide oversized chapter numerals */
+.chapter-number{
+    display:none;
+}
