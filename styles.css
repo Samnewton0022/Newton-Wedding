@@ -695,3 +695,26 @@ footer{text-align:center;padding:70px 20px;background:#101e33;color:#f1eee8}
   .crest.crest-image{width:190px;margin-bottom:10px}
 }
 
+
+
+/* Clean save-the-date shield crest */
+.crest.crest-image{
+  width:230px;
+  filter:none;
+}
+.crest.crest-image img{
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+.footer-crest-image img{
+  width:125px;
+  padding:0;
+  background:transparent;
+  border:0;
+  filter:none;
+}
+@media(max-width:800px){
+  .crest.crest-image{width:185px}
+  .footer-crest-image img{width:105px}
+}
