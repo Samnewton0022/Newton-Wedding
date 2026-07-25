@@ -272,7 +272,7 @@ footer{text-align:center;padding:70px 20px;background:#101e33;color:#f1eee8}
     height:auto;
     background-image:url("assets/engagement.jpg");
     background-size:cover;
-    background-position:center 45%;
+    background-position:center 15%;
     border:1px solid var(--gold);
     box-shadow:0 24px 70px rgba(20,36,61,.12);
 }
