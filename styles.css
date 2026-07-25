@@ -701,51 +701,50 @@ footer{
 }
 
 /* ==========================================
-   NEWTON CREST CROSS SYSTEM
-   One reusable crest-inspired cross everywhere
+   EXACT NEWTON CREST CROSS
+   Directly extracted from the approved crest
    ========================================== */
 
 .crest-cross-icon{
   display:block;
   width:100%;
   height:100%;
-  color:inherit;
   object-fit:contain;
 }
 
-/* Wedding Day divider and Promise section */
+/* Promise section */
 .detail-cross{
-  width:30px;
-  height:43px;
+  width:34px;
+  height:46px;
   margin-bottom:16px;
-  color:var(--gold);
 }
 
+/* Wedding Day divider */
 .wedding-day-break .detail-cross{
-  width:38px;
-  height:55px;
+  width:44px;
+  height:59px;
   margin:0 auto 26px;
 }
 
 /* Wedding Weekend ceremony marker */
 .timeline-cross .crest-cross-icon{
-  width:28px;
+  width:30px;
   height:40px;
 }
 
 @media(max-width:800px){
   .detail-cross{
-    width:27px;
-    height:39px;
+    width:30px;
+    height:41px;
   }
 
   .wedding-day-break .detail-cross{
-    width:34px;
-    height:49px;
+    width:39px;
+    height:52px;
   }
 
   .timeline-cross .crest-cross-icon{
-    width:24px;
+    width:26px;
     height:35px;
   }
 }
