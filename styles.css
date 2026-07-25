@@ -90,7 +90,14 @@ img,svg{display:block;max-width:100%}
 
 .details{padding:145px 5vw;background:var(--navy);color:white}
 .section-title{text-align:center;margin-bottom:70px}.details .section-title h2{color:white}
-.detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px;max-width:1120px;margin:auto}
+.detail-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:30px;
+    max-width:1120px;
+    margin:auto;
+    align-items:start;
+}
 .detail-card{border:1px solid rgba(185,151,91,.65);padding:70px 45px;text-align:center;background:rgba(255,255,255,.03)}
 .detail-icon{font-size:32px;color:var(--gold)}.detail-card h3{font-size:38px;margin:14px 0}.detail-card p{color:#d9dde5}
 .detail-card a{display:inline-block;margin-top:18px;color:var(--gold);text-transform:uppercase;letter-spacing:.18em;font-size:9px;border-bottom:1px solid}
