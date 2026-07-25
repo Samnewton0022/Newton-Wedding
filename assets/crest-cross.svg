@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64 92"
+  role="img"
+  aria-label="Newton crest cross">
+  <g fill="none" stroke="currentColor" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M27 6h10v24h17v11H37v45H27V41H10V30h17z" stroke-width="2.8"/>
+    <path d="M23 10h18v16h17v19H41v45H23V45H6V26h17z" stroke-width="1.25" opacity=".58"/>
+    <path d="M31 2h2v32h25v3H33v51h-2V37H6v-3h25z" stroke-width="1.1" opacity=".42"/>
+  </g>
+</svg>
