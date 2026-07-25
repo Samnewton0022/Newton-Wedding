@@ -341,7 +341,50 @@ footer{text-align:center;padding:70px 20px;background:#101e33;color:#f1eee8}
 /* EDITORIAL CHAPTER EXPERIENCE */
 body.loading{overflow:hidden}
 .cinematic-loader{position:fixed;inset:0;z-index:220;display:grid;place-items:center;background:var(--navy-dark);color:var(--paper);opacity:1;visibility:visible;transition:opacity .9s ease,visibility .9s ease}
-.cinematic-loader.is-finished{opacity:0;visibility:hidden}.loader-frame{position:relative;width:min(520px,86vw);height:220px;display:grid;place-items:center;text-align:center}.loader-step{position:absolute;opacity:0;transform:translateY(10px);animation:loaderMoment 4.8s ease forwards}.loader-mark{font-family:"Cormorant Garamond",serif;font-size:clamp(58px,10vw,92px);letter-spacing:.08em}.loader-mark span{color:var(--gold)}.loader-name{font-family:"Cormorant Garamond",serif;font-size:clamp(24px,4vw,38px);letter-spacing:.28em}.loader-date{font-size:10px;letter-spacing:.34em}.loader-cross{width:24px;height:36px;color:var(--gold)}.loader-cross path{fill:none;stroke:currentColor;stroke-width:1.35}.step-one{animation-delay:.15s}.step-two{animation-delay:1.25s}.step-three{animation-delay:2.35s}.step-four{animation-delay:3.45s}@keyframes loaderMoment{0%{opacity:0;transform:translateY(10px)}12%,62%{opacity:1;transform:none}78%,100%{opacity:0;transform:translateY(-8px)}}
+.cinematic-loader.is-finished{opacity:0;visibility:hidden}.loader-frame{position:relative;width:min(520px,86vw);height:220px;display:grid;place-items:center;text-align:center}.loader-step{
+    position:absolute;
+    opacity:0;
+    transform:translateY(10px);
+    animation:loaderMoment 1.35s ease both;
+}
+
+.step-one{
+    animation-delay:.2s;
+}
+
+.step-two{
+    animation-delay:1.8s;
+}
+
+.step-three{
+    animation-delay:3.4s;
+}
+
+.step-four{
+    animation-delay:5s;
+}
+
+@keyframes loaderMoment{
+    0%{
+        opacity:0;
+        transform:translateY(10px);
+    }
+
+    20%{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+    80%{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+    100%{
+        opacity:0;
+        transform:translateY(-12px);
+    }
+}
 .chapter-panel{position:relative;overflow:hidden}.chapter-number{position:absolute;z-index:0;top:50%;transform:translateY(-50%);font-family:"Cormorant Garamond",serif;font-size:clamp(240px,34vw,560px);line-height:.7;color:rgba(32,52,84,.055);pointer-events:none;user-select:none}.chapter-one .chapter-number,.promise .chapter-number{left:-.04em}.chapter-two .chapter-number,.celebration-chapter .chapter-number{right:-.02em}.chapter-panel>*:not(.chapter-number){position:relative;z-index:1}.chapter-lead{font-family:"Cormorant Garamond",serif;font-size:clamp(25px,2.3vw,34px);line-height:1.25;color:var(--navy);margin-bottom:18px}.art-caption{display:grid;gap:4px;margin-top:42px;padding-top:20px;border-top:1px solid rgba(185,151,91,.38);max-width:380px}.art-caption strong{font-family:"Cormorant Garamond",serif;font-size:24px;color:var(--navy);font-weight:500}.art-caption span{text-transform:uppercase;letter-spacing:.18em;font-size:8px;color:var(--gold)}
 .story-row{position:relative}.story-copy,.illustration{position:relative;z-index:1}.vodka-sodas-realistic,.don-cesar-watercolor{transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .8s ease}.story-row:hover .vodka-sodas-realistic,.story-row:hover .don-cesar-watercolor{transform:translateY(-6px);filter:drop-shadow(0 24px 28px rgba(20,36,61,.13))}
 .promise{min-height:900px;display:grid;grid-template-columns:1.08fr .92fr;align-items:stretch;background:var(--paper)}.promise-art{min-height:780px;margin:40px 0 40px 4vw;background:url("assets/cathedral.jpeg") center/contain no-repeat;border:1px solid var(--gold);box-shadow:0 24px 70px rgba(20,36,61,.12)}.promise-copy{padding:clamp(80px,9vw,140px);display:flex;flex-direction:column;justify-content:center}.promise-copy h2,.celebration-copy h2{font-size:clamp(58px,7vw,100px);color:var(--navy);margin:14px 0 24px}.promise-details,.celebration-details{margin-top:28px;padding-top:28px;border-top:1px solid rgba(185,151,91,.45)}.promise-details h3,.celebration-details h3{font-size:34px;color:var(--navy);margin:10px 0 8px}.promise-details p,.celebration-details p{color:var(--muted)}.promise-details a,.celebration-details a{display:inline-block;margin-top:12px;color:var(--gold);text-transform:uppercase;letter-spacing:.18em;font-size:9px;border-bottom:1px solid}.detail-cross{width:20px;height:30px;color:var(--gold);margin-bottom:14px}.detail-cross svg{width:100%;height:100%}.detail-cross path{fill:none;stroke:currentColor;stroke-width:1.4}
