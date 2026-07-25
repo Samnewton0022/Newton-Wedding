@@ -35,7 +35,18 @@
     }
   </style>
 </head>
-<body class="locked">
+<body class="locked loading">
+  <div class="cinematic-loader" id="cinematicLoader" aria-hidden="true">
+    <div class="loader-frame">
+      <div class="loader-mark loader-step step-one">S <span>&amp;</span> M</div>
+      <div class="loader-name loader-step step-two">THE NEWTONS</div>
+      <div class="loader-date loader-step step-three">SEPTEMBER 25, 2027</div>
+      <svg class="loader-cross loader-step step-four" viewBox="0 0 24 36" focusable="false">
+        <path d="M12 2V34"></path><path d="M5 11H19"></path>
+      </svg>
+    </div>
+  </div>
+
   <div class="opening" id="opening" aria-label="Wedding invitation">
     <div class="opening-sketch" aria-hidden="true">
       <svg viewBox="0 0 1200 480" role="img">
@@ -119,70 +130,63 @@
       <p>From a bar in Charlotte, to a pink palace by the sea, to forever in Tampa.</p>
     </section>
 
-    <section class="story" id="story">
-      <article class="story-row reveal">
+    <section class="story editorial-chapters" id="story">
+      <article class="story-row chapter-panel chapter-one reveal">
+        <span class="chapter-number" aria-hidden="true">I</span>
         <div class="story-copy">
-          <p class="chapter">Chapter I</p>
-          <h2>We Met at a Bar</h2>
+          <p class="chapter">Chapter I</p><h2>The First Round</h2>
           <h3>The Gin Mill · Charlotte, North Carolina</h3>
-          <p>One ordinary night, one unforgettable meeting, and one Vodka Red Bull later—the rest became our favorite story.</p>
+          <p class="chapter-lead">One Vodka Red Bull. One Vodka Soda with Lime.</p>
+          <p>The first drinks we ever shared. We didn’t know it then, but we had just ordered the beginning of forever.</p>
+          <p class="art-caption"><strong>The First Round</strong><span>The beginning of forever.</span></p>
         </div>
-        <div class="illustration drink-illustration" aria-label="Two realistic vodka sodas with lime">
-          <img class="vodka-sodas-realistic" src="assets/vodka-sodas-realistic.png" alt="Two clear vodka sodas in lowball glasses with ice and fresh lime wedges">
+        <div class="illustration drink-illustration" aria-label="Watercolor illustration of a Vodka Red Bull and vodka soda with lime">
+          <img class="vodka-sodas-realistic" src="assets/vodka-sodas-realistic.png" alt="Watercolor illustration of a Vodka Red Bull and vodka soda with lime">
         </div>
       </article>
-
-      <article class="story-row reverse blush reveal">
+      <article class="story-row reverse blush chapter-panel chapter-two reveal">
+        <span class="chapter-number" aria-hidden="true">II</span>
         <div class="story-copy">
-          <p class="chapter">Chapter II</p>
-          <h2>The Easiest Yes</h2>
+          <p class="chapter">Chapter II</p><h2>The Easiest Yes</h2>
           <h3>The Don CeSar · St. Pete Beach, Florida</h3>
-          <p>On March 28, 2026, in front of the Pink Palace, Sam asked the question that changed everything. Madison said yes.</p>
+          <p class="chapter-lead">Some places become memories.</p>
+          <p>On March 28, 2026, in front of the Pink Palace, Sam asked the question that changed everything. This one became the place where forever began.</p>
+          <p class="art-caption"><strong>The Easiest Yes</strong><span>Where forever began.</span></p>
         </div>
-        <div class="illustration hotel-illustration" aria-label="Line drawing of The Don CeSar">
-          <img
-  src="assets/don-cesar-watercolor.png"
-  alt="Watercolor illustration of the Don CeSar hotel"
-  class="don-cesar-watercolor"
-        >
+        <div class="illustration hotel-illustration" aria-label="Watercolor illustration of The Don CeSar">
+          <img src="assets/don-cesar-watercolor.png" alt="Watercolor illustration of the Don CeSar hotel" class="don-cesar-watercolor">
         </div>
       </article>
     </section>
 
-    <section class="details" id="details">
-      <div class="section-title reveal">
-        <p class="eyebrow">September 25, 2027</p>
-        <h2>The Celebration</h2>
-      </div>
-      <div class="detail-grid">
-        <article class="detail-card reveal">
-          <div class="detail-icon detail-cross" aria-hidden="true">
-          <svg viewBox="0 0 24 36" focusable="false" aria-hidden="true">
-            <path d="M12 2V34"></path>
-            <path d="M5 11H19"></path>
-            <path d="M10.2 2H13.8"></path>
-            <path d="M10.2 34H13.8"></path>
-            <path d="M5 9.4V12.6"></path>
-            <path d="M19 9.4V12.6"></path>
-          </svg>
-          </div>
-          <p class="time">2:00 PM</p>
-          <h3>Sacred Heart Catholic Church</h3>
-          <p>Tampa, Florida</p>
+    <section class="promise chapter-panel" id="details">
+      <span class="chapter-number" aria-hidden="true">III</span>
+      <div class="promise-art reveal" aria-hidden="true"></div>
+      <div class="promise-copy reveal">
+        <p class="chapter">Chapter III</p><h2>The Promise</h2>
+        <p class="chapter-lead">Before the celebration comes the moment we’ve dreamed about.</p>
+        <div class="promise-details">
+          <div class="detail-cross" aria-hidden="true"><svg viewBox="0 0 24 36"><path d="M12 2V34"></path><path d="M5 11H19"></path></svg></div>
+          <p class="time">2:00 PM</p><h3>Sacred Heart Catholic Church</h3><p>Tampa, Florida</p>
           <a href="https://maps.google.com/?q=Sacred+Heart+Catholic+Church+Tampa+Florida" target="_blank" rel="noopener">View directions</a>
-        </article>
-        <article class="detail-card reveal">
-          <div class="detail-icon">♕</div>
-          <p class="time">5:00 PM</p>
-          <h3>Carrollwood Country Club</h3>
-          <p>Tampa, Florida</p>
-          <a href="https://maps.google.com/?q=Carrollwood+Country+Club+Tampa+Florida" target="_blank" rel="noopener">View directions</a>
-        </article>
+        </div>
+        <p class="art-caption"><strong>The Sacrament</strong><span>Faith, hope and love.</span></p>
       </div>
-      <div class="countdown-wrap reveal">
-        <p class="eyebrow">Until we say I do</p>
-        <div class="countdown" id="countdown"></div>
+    </section>
+
+    <section class="celebration-chapter chapter-panel">
+      <span class="chapter-number" aria-hidden="true">IV</span>
+      <div class="celebration-inner">
+        <div class="celebration-logo reveal"><img src="assets/ccc-logo.png" alt="Carrollwood Country Club monogram"></div>
+        <div class="celebration-copy reveal">
+          <p class="chapter">Chapter IV</p><h2>The Celebration</h2>
+          <p class="chapter-lead">Dinner. Dancing. Family. Friends. Forever.</p>
+          <div class="celebration-details"><p class="time">5:00 PM</p><h3>Carrollwood Country Club</h3><p>Tampa, Florida</p>
+          <a href="https://maps.google.com/?q=Carrollwood+Country+Club+Tampa+Florida" target="_blank" rel="noopener">View directions</a></div>
+          <p class="art-caption"><strong>The Celebration</strong><span>The beginning of our next chapter.</span></p>
+        </div>
       </div>
+      <div class="countdown-wrap reveal"><p class="eyebrow">Until we say I do</p><div class="countdown" id="countdown"></div></div>
     </section>
 
     <section class="travel" id="travel">
@@ -222,16 +226,7 @@
 
   <footer>
     <div class="footer-crest">
-      <span class="cross" aria-hidden="true">
-        <svg viewBox="0 0 24 36" focusable="false" aria-hidden="true">
-            <path d="M12 2V34"></path>
-            <path d="M5 11H19"></path>
-            <path d="M10.2 2H13.8"></path>
-            <path d="M10.2 34H13.8"></path>
-            <path d="M5 9.4V12.6"></path>
-            <path d="M19 9.4V12.6"></path>
-          </svg>
-      </span>
+      <span class="cross" aria-hidden="true"><svg viewBox="0 0 24 36" focusable="false"><path d="M12 2V34"></path><path d="M5 11H19"></path></svg></span>
       <strong>S & M</strong>
       <small>IX • XXV • MMXXVII</small>
     </div>
