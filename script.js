@@ -2,6 +2,33 @@ const opening = document.getElementById("opening");
 const openButton = document.getElementById("openInvitation");
 const body = document.body;
 
+const params = new URLSearchParams(window.location.search);
+const skipInvitation = params.get("skipInvite") === "1";
+
+if (skipInvitation && opening) {
+  opening.style.display = "none";
+  body.classList.remove("locked");
+  document.documentElement.style.overflow = "";
+
+  // Clean the temporary query parameter from the address bar while keeping #home.
+  window.history.replaceState(
+    {},
+    "",
+    `${window.location.pathname}${window.location.hash || "#home"}`
+  );
+
+  window.addEventListener(
+    "load",
+    () => {
+      const home = document.getElementById("home");
+      if (home) {
+        home.scrollIntoView({ block: "start" });
+      }
+    },
+    { once: true }
+  );
+}
+
 function openSite() {
   if (!opening) return;
 
@@ -73,7 +100,9 @@ if ("IntersectionObserver" in window) {
 
   revealElements.forEach((element) => observer.observe(element));
 } else {
-  revealElements.forEach((element) => element.classList.add("in-view"));
+  revealElements.forEach((element) =>
+    element.classList.add("in-view")
+  );
 }
 
 const weddingDate = new Date("2027-09-25T14:00:00-04:00");
@@ -91,9 +120,15 @@ function updateCountdown() {
   }
 
   const days = Math.floor(difference / 86400000);
-  const hours = Math.floor((difference % 86400000) / 3600000);
-  const minutes = Math.floor((difference % 3600000) / 60000);
-  const seconds = Math.floor((difference % 60000) / 1000);
+  const hours = Math.floor(
+    (difference % 86400000) / 3600000
+  );
+  const minutes = Math.floor(
+    (difference % 3600000) / 60000
+  );
+  const seconds = Math.floor(
+    (difference % 60000) / 1000
+  );
 
   countdown.innerHTML = `
     <div><strong>${days}</strong><span>Days</span></div>
