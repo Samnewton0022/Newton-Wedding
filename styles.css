@@ -749,19 +749,3 @@ footer{
   }
 }
 
-
-/* Hero photo: show more of the portrait image instead of cropping it tightly */
-.hero-photo{
-  background-size:contain;
-  background-repeat:no-repeat;
-  background-position:center center;
-  background-color:var(--paper);
-}
-
-@media(max-width:800px){
-  .hero-photo{
-    background-size:contain;
-    background-repeat:no-repeat;
-    background-position:center center;
-  }
-}
