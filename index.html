@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#203454">
+  <meta name="description" content="The wedding of Sam and Madison — September 25, 2027 in Tampa, Florida.">
+  <title>Sam & Madison | September 25, 2027</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&family=Italiana&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260821-1044">
+<!-- MOBILE-INLINE-FIX-20260821 -->
+<style id="mobile-inline-fix-20260821">
+@media (max-width: 600px) {
+  /* Opening invitation: intentionally smaller, floating like desktop */
+  #opening.opening {
+    display:grid !important;
+    place-items:start center !important;
+    padding:7vh 0 16px !important;
+    overflow:hidden !important;
+  }
+  /* Mobile opening backdrop: show the cathedral as a complete, subtle silhouette */
+  #opening .opening-sketch {
+    left:50% !important;
+    right:auto !important;
+    bottom:1.5vh !important;
+    width:106vw !important;
+    max-width:none !important;
+    transform:translateX(-50%) !important;
+    color:rgba(32,52,84,.075) !important;
+    opacity:1 !important;
+  }
+  #opening .opening-sketch svg {
+    display:block !important;
+    width:100% !important;
+    height:auto !important;
+  }
+  #opening .invitation-card {
+    width:80vw !important;
+    max-width:350px !important;
+    min-height:0 !important;
+    height:auto !important;
+    max-height:calc(100svh - 30px) !important;
+    margin:0 auto !important;
+    padding:18px 22px 22px !important;
+    overflow:hidden !important;
+  }
+  #opening .crest.crest-image {
+    width:100px !important;
+    height:auto !important;
+    margin:0 auto 6px !important;
+    padding:0 !important;
+    border:0 !important;
+  }
+  #opening .crest.crest-image:before { display:none !important; }
+  #opening .invitation-card .kicker {
+    font-size:6.1px !important;
+    margin:0 0 5px !important;
+  }
+  #opening .invitation-card h1 {
+    font-size:30px !important;
+    margin:2px 0 6px !important;
+  }
+  #opening .invite-copy {
+    font-size:11px !important;
+    line-height:1.2 !important;
+    margin:0 !important;
+  }
+  #opening .date-lockup { margin:7px 0 !important; gap:0 !important; }
+  #opening .date-lockup span { font-size:5.8px !important; }
+  #opening .date-lockup strong { font-size:15.5px !important; }
+  #opening .invitation-card blockquote {
+    max-width:250px !important;
+    font-size:8.5px !important;
+    line-height:1.22 !important;
+    margin:6px auto 0 !important;
+  }
+  #opening .invitation-card cite { font-size:5.2px !important; }
+  #opening .seal {
+    width:48px !important;
+    height:48px !important;
+    margin-top:7px !important;
+  }
+  #opening .seal-monogram { font-size:13px !important; }
+  #opening .seal-label { font-size:4.4px !important; margin-top:2px !important; }
+
+  /* Story chapters: eliminate the oversized mobile image wells */
+  #story .story-row,
+  #story .story-row.reverse {
+    display:block !important;
+    min-height:0 !important;
+    height:auto !important;
+  }
+  #story .story-copy {
+    padding:54px 28px 20px !important;
+  }
+  #story .illustration,
+  #story .drink-illustration,
+  #story .hotel-illustration {
+    display:block !important;
+    min-height:0 !important;
+    height:auto !important;
+    padding:6px 18px 34px !important;
+    margin:0 !important;
+  }
+  #story .vodka-sodas-realistic {
+    display:block !important;
+    width:84% !important;
+    max-width:520px !important;
+    height:auto !important;
+    margin:0 auto !important;
+    transform:none !important;
+  }
+  #story .don-cesar-watercolor {
+    display:block !important;
+    width:92% !important;
+    max-width:560px !important;
+    height:auto !important;
+    margin:0 auto !important;
+    transform:none !important;
+  }
+
+  /* Wedding weekend: day labels start on the left with the gold spine */
+  #weekend .timeline:before {
+    left:28px !important;
+    transform:none !important;
+  }
+  #weekend .timeline-day-heading {
+    width:calc(100% - 54px) !important;
+    max-width:none !important;
+    margin:0 0 38px 28px !important;
+    padding:13px 16px 15px !important;
+    text-align:center !important;
+  }
+  #weekend .timeline-day-heading p,
+  #weekend .timeline-day-heading h3 {
+    text-align:center !important;
+  }
+  #weekend .timeline-day-heading p { font-size:31px !important; }
+  #weekend .timeline-day-heading h3 { font-size:8px !important; }
+  #weekend .timeline-event {
+    grid-template-columns:58px minmax(0,1fr) !important;
+  }
+  #weekend .timeline-marker {
+    grid-column:1 !important;
+  }
+  #weekend .timeline-event .timeline-card,
+  #weekend .timeline-event:nth-of-type(even) .timeline-card,
+  #weekend .timeline-event:nth-of-type(odd) .timeline-card {
+    grid-column:2 !important;
+    text-align:left !important;
+    padding:26px 8px 26px 16px !important;
+  }
+}
+
+
+/* Desktop hero: narrower photo frame = less aggressive crop of portrait engagement photo */
+@media (min-width: 801px) {
+  .hero {
+    padding-left: 10vw !important;
+    padding-right: 10vw !important;
+  }
+  .hero-photo {
+    inset: 104px 10vw 4vw !important;
+    background-position: center 30% !important;
+  }
+  .hero-shade {
+    inset: 104px 10vw 4vw !important;
+  }
+  .hero-copy {
+    padding-left: 8vw !important;
+    padding-bottom: 8vh !important;
+  }
+}
+
+</style>
+<!-- /MOBILE-INLINE-FIX-20260821 -->
+<style id="travel-hotel-details">
+.travel-columns small{display:block;margin-top:8px;color:var(--muted);font-size:12px;line-height:1.6;font-weight:300}
+</style>
+</head>
+<body class="locked ">
+  
+<div class="opening" id="opening" aria-label="Wedding invitation">
+    <div class="opening-sketch" aria-hidden="true">
+      <svg viewBox="0 0 1200 480" role="img">
+        <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M64 414h1072M170 414V230h58v-70h74v70h62V122h92v108h62V74h164v156h62V122h92v108h62v-70h74v70h58v184"/>
+          <path d="M216 414V260h136v154M848 414V260h136v154M456 414V250h288v164"/>
+          <path d="M508 414V302h184v112M600 74V20M574 45h52"/>
+          <path d="M522 118h156M530 150h140M538 182h124M548 214h104"/>
+          <path d="M260 190h48M892 190h48M392 156h36M772 156h36"/>
+          <path d="M188 414c20-62 56-86 102-86s82 24 102 86M808 414c20-62 56-86 102-86s82 24 102 86"/>
+          <path d="M92 414c16-44 38-66 66-68M1108 414c-16-44-38-66-66-68"/>
+          <path d="M242 328h82M876 328h82M478 278h244"/>
+          <path d="M550 414v-70h100v70M586 344v70M614 344v70"/>
+          <path d="M197 230l31-36 31 36M941 230l31-36 31 36M364 122l46-44 46 44M744 122l46-44 46 44"/>
+          <path d="M518 74l82-54 82 54"/>
+          <path d="M84 414c26-16 48-15 69 3M1047 417c21-18 43-19 69-3"/>
+        </g>
+      </svg>
+    </div>
+
+    <article class="invitation-card" id="invitationCard">
+      <div class="paper-grain"></div>
+      <div class="crest crest-image" aria-label="Sam and Madison wedding crest">
+        <img src="assets/save-the-date-crest-clean.png" alt="S and M Newton wedding crest">
+      </div>
+      <p class="kicker">Together with their families</p>
+      <h1>Sam <em>&</em> Madison</h1>
+      <p class="invite-copy">joyfully invite you to celebrate<br>the Sacrament of Holy Matrimony</p>
+      <div class="date-lockup">
+        <span>Saturday</span>
+        <strong>September 25, 2027</strong>
+        <span>Tampa, Florida</span>
+      </div>
+      <blockquote>“And now these three remain: faith, hope and love. But the greatest of these is love.”</blockquote>
+      <cite>1 Corinthians 13:13</cite>
+      <button class="seal" id="openInvitation" type="button">
+        <span class="seal-monogram">S&amp;M</span>
+        <span class="seal-label">Open</span>
+      </button>
+    </article>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Back to top">S <span>&</span> M</a>
+    <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="siteNav">Menu</button>
+    <nav id="siteNav">
+      <a href="#story">Our Journey</a>
+      <a href="#details">The Celebration</a>
+      <a href="#weekend">The Weekend</a>
+      <a href="#travel">Travel</a>
+      <a href="#rsvp">RSVP</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-photo" role="img" aria-label="Sam and Madison"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow">The wedding of</p>
+        <h2>Sam <em>&</em> Madison</h2>
+        <p>September 25, 2027 · Tampa, Florida</p>
+        <a href="#story" class="text-link">Enter our story <span>↓</span></a>
+      </div>
+    </section>
+
+    <section class="editorial-intro reveal">
+      <p class="script">Every love story is beautiful.</p>
+      <h2>Ours began with a<br>Vodka Red Bull.</h2>
+      <p>From a bar in Charlotte, to a pink palace by the sea, to forever in Tampa.</p>
+    </section>
+
+    <section class="story editorial-chapters" id="story">
+      <article class="story-row chapter-panel chapter-one reveal">
+        <span class="chapter-number" aria-hidden="true">I</span>
+        <div class="story-copy">
+          <p class="chapter">Chapter I</p><h2>The First Round</h2>
+          <h3>The Gin Mill · Charlotte, North Carolina</h3>
+          <p class="chapter-lead">One Vodka Red Bull. One Vodka Soda with Lime.</p>
+          <p>The first drinks we ever shared. We didn’t know it then, but we had just ordered the beginning of forever.</p>
+          <p class="art-caption"><strong>The First Round</strong><span>The beginning of forever.</span></p>
+        </div>
+        <div class="illustration drink-illustration" aria-label="Watercolor illustration of a Vodka Red Bull and vodka soda with lime">
+          <img class="vodka-sodas-realistic" src="assets/vodka-sodas-realistic.png" alt="Watercolor illustration of a Vodka Red Bull and vodka soda with lime">
+        </div>
+      </article>
+      <article class="story-row reverse blush chapter-panel chapter-two reveal">
+        <span class="chapter-number" aria-hidden="true">II</span>
+        <div class="story-copy">
+          <p class="chapter">Chapter II</p><h2>The Easiest Yes</h2>
+          <h3>The Don CeSar · St. Pete Beach, Florida</h3>
+          <p class="chapter-lead">Some places become memories.</p>
+          <p>On March 28, 2026, in front of the Pink Palace, Sam asked the question that changed everything. This one became the place where forever began.</p>
+          <p class="art-caption"><strong>The Easiest Yes</strong><span>Where forever began.</span></p>
+        </div>
+        <div class="illustration hotel-illustration" aria-label="Watercolor illustration of The Don CeSar">
+          <img src="assets/don-cesar-watercolor.png" alt="Watercolor illustration of the Don CeSar hotel" class="don-cesar-watercolor">
+        </div>
+      </article>
+    </section>
+
+
+    <section class="wedding-day-break reveal">
+      <div class="detail-cross" aria-hidden="true"><img class="crest-cross-icon" src="assets/crest-cross-exact.png" alt="" aria-hidden="true"></div>
+      <p class="break-script">The Story Continues...</p>
+      <div class="break-line"></div>
+      <h2>The Wedding Day</h2>
+      <p class="break-date">
+        September 25, 2027<br>
+        Tampa, Florida
+      </p>
+    </section>
+
+    <section class="promise chapter-panel" id="details">
+      <span class="chapter-number" aria-hidden="true">III</span>
+      <div class="promise-art reveal" aria-hidden="true"></div>
+      <div class="promise-copy reveal">
+        <p class="chapter">Chapter III</p><h2>The Promise</h2>
+        <p class="chapter-lead">Before the celebration comes the moment we’ve dreamed about.</p>
+        <div class="promise-details">
+          <div class="detail-cross" aria-hidden="true"><img class="crest-cross-icon" src="assets/crest-cross-exact.png" alt="" aria-hidden="true"></div>
+          <p class="time">2:00 PM</p><h3>Sacred Heart Catholic Church</h3><p>Tampa, Florida</p>
+          <a href="https://maps.google.com/?q=Sacred+Heart+Catholic+Church+Tampa+Florida" target="_blank" rel="noopener">View directions</a>
+        </div>
+        <p class="art-caption"><strong>The Sacrament</strong><span>Faith, hope and love.</span></p>
+        <div class="promise-verse">
+          <blockquote>
+            “Then the Lord God said, ‘It is not good that the man should be alone; I will make him a helper fit for him.’”
+          </blockquote>
+          <cite>Genesis 2:18</cite>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="celebration-chapter chapter-panel">
+      <span class="chapter-number" aria-hidden="true">IV</span>
+      <div class="celebration-inner">
+        <div class="celebration-logo reveal"><img src="assets/ccc-logo.png" alt="Carrollwood Country Club monogram"></div>
+        <div class="celebration-copy reveal">
+          <p class="chapter">Chapter IV</p><h2>The Celebration</h2>
+          <p class="chapter-lead">Dinner. Dancing. Family. Friends. Forever.</p>
+          <div class="celebration-details"><p class="time">5:00 PM</p><h3>Carrollwood Country Club</h3><p>Tampa, Florida</p>
+          <a href="https://maps.google.com/?q=Carrollwood+Country+Club+Tampa+Florida" target="_blank" rel="noopener">View directions</a></div>
+          <p class="art-caption"><strong>The Celebration</strong><span>The beginning of our next chapter.</span></p>
+        </div>
+      </div>
+      <div class="countdown-wrap reveal"><p class="eyebrow">Until we say I do</p><div class="countdown" id="countdown"></div></div>
+    </section>
+
+
+    <section class="wedding-weekend" id="weekend">
+      <div class="weekend-heading reveal">
+        <p class="chapter">Chapter V</p>
+        <h2>The Wedding Weekend</h2>
+        <p class="weekend-dates">September 24–26, 2027</p>
+        <p class="weekend-intro">A weekend filled with faith, family, friendship, and celebration.</p>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-day reveal">
+          <header class="timeline-day-heading">
+            <p>Friday</p>
+            <h3>September 24, 2027</h3>
+          </header>
+
+          <div class="timeline-event">
+            <div class="timeline-marker" aria-hidden="true">
+              <svg viewBox="0 0 40 40">
+                <path d="M11 32V7"></path>
+                <path d="M12 8h17l-5 6 5 6H12"></path>
+                <path d="M5 32h14"></path>
+              </svg>
+            </div>
+            <div class="timeline-card">
+              <p class="timeline-time">10:00 AM</p>
+              <h4>Golf Outing</h4>
+              <p class="timeline-location">Carrollwood Country Club</p>
+              <p>A morning on the course with family and friends before the wedding festivities begin.</p>
+            </div>
+          </div>
+
+          <div class="timeline-event">
+            <div class="timeline-marker" aria-hidden="true">
+              <svg viewBox="0 0 40 40">
+                <path d="M8 8h10c0 8-1 13-5 17v7"></path>
+                <path d="M7 32h12"></path>
+                <path d="M22 8h10c0 8-1 13-5 17v7"></path>
+                <path d="M21 32h12"></path>
+                <path d="M10 15h6M24 15h6"></path>
+              </svg>
+            </div>
+            <div class="timeline-card">
+              <p class="timeline-time">7:00–10:00 PM</p>
+              <h4>Welcome Party</h4>
+              <p class="timeline-location">511 Franklin · 513 N Franklin St, Tampa, FL 33602</p>
+              <p>Join us for cocktails, hors d’oeuvres, conversation, and celebration as we officially begin the wedding weekend together. Two drink tickets will be included for each guest.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-day reveal">
+          <header class="timeline-day-heading">
+            <p>Saturday</p>
+            <h3>September 25, 2027</h3>
+          </header>
+
+          <div class="timeline-event">
+            <div class="timeline-marker timeline-cross" aria-hidden="true"><img class="crest-cross-icon" src="assets/crest-cross-exact.png" alt="" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <p class="timeline-time">2:00 PM</p>
+              <h4>The Promise</h4>
+              <p class="timeline-location">Sacred Heart Catholic Church</p>
+              <p>Where two become one.</p>
+            </div>
+          </div>
+
+          <div class="timeline-event">
+            <div class="timeline-marker" aria-hidden="true">
+              <svg viewBox="0 0 40 40">
+                <path d="M8 8h10c0 8-1 13-5 17v7"></path>
+                <path d="M7 32h12"></path>
+                <path d="M22 8h10c0 8-1 13-5 17v7"></path>
+                <path d="M21 32h12"></path>
+              </svg>
+            </div>
+            <div class="timeline-card">
+              <p class="timeline-time">4:00 PM</p>
+              <h4>Cocktail Hour</h4>
+              <p class="timeline-location">Carrollwood Country Club</p>
+            </div>
+          </div>
+
+          <div class="timeline-event">
+            <div class="timeline-marker" aria-hidden="true">
+              <svg viewBox="0 0 40 40">
+                <circle cx="20" cy="18" r="10"></circle>
+                <path d="M20 5v6M7 18H3M37 18h-4M10 8l4 4M30 8l-4 4"></path>
+                <path d="M8 32h24"></path>
+              </svg>
+            </div>
+            <div class="timeline-card">
+              <p class="timeline-time">5:00 PM</p>
+              <h4>Dinner &amp; Toasts</h4>
+              <p class="timeline-location">Carrollwood Country Club</p>
+            </div>
+          </div>
+
+          <div class="timeline-event">
+            <div class="timeline-marker" aria-hidden="true">
+              <svg viewBox="0 0 40 40">
+                <path d="M15 29V10l15-3v18"></path>
+                <circle cx="10" cy="30" r="5"></circle>
+                <circle cx="25" cy="26" r="5"></circle>
+              </svg>
+            </div>
+            <div class="timeline-card">
+              <p class="timeline-time">7:00 PM</p>
+              <h4>Dancing</h4>
+              <p>Celebrate the beginning of forever.</p>
+            </div>
+          </div>
+
+          <div class="timeline-event">
+            <div class="timeline-marker" aria-hidden="true">
+              <svg viewBox="0 0 40 40">
+                <path d="M20 4v8M20 28v8M4 20h8M28 20h8M8.7 8.7l5.7 5.7M25.6 25.6l5.7 5.7M31.3 8.7l-5.7 5.7M14.4 25.6l-5.7 5.7"></path>
+                <circle cx="20" cy="20" r="4"></circle>
+              </svg>
+            </div>
+            <div class="timeline-card">
+              <p class="timeline-time">Evening</p>
+              <h4>Last Dance</h4>
+              <p>The first night of forever.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-day timeline-day-final reveal">
+          <header class="timeline-day-heading">
+            <p>Sunday</p>
+            <h3>September 26, 2027</h3>
+          </header>
+
+          <div class="timeline-event">
+            <div class="timeline-marker" aria-hidden="true">
+              <svg viewBox="0 0 40 40">
+                <path d="M8 13h20v8c0 7-4 11-10 11S8 28 8 21z"></path>
+                <path d="M28 16h3c5 0 5 8 0 8h-3"></path>
+                <path d="M7 35h24"></path>
+              </svg>
+            </div>
+            <div class="timeline-card">
+              <p class="timeline-time">Farewell</p>
+              <h4>Safe Travels</h4>
+              <p>Thank you for being part of our story.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="weekend-closing reveal">
+        <span class="closing-line" aria-hidden="true"></span>
+        <p class="closing-thanks">With love,</p>
+        <h3>And so begins our greatest adventure.</h3>
+        <p class="closing-names">Sam &amp; Madison</p>
+        <p class="closing-date">September 25, 2027</p>
+        <span class="closing-line" aria-hidden="true"></span>
+        <p class="forever-starts">Forever starts here.</p>
+      </div>
+    </section>
+
+    <section class="travel" id="travel">
+      <div class="section-title reveal">
+        <p class="eyebrow">Welcome to Tampa</p>
+        <h2>Travel & Stay</h2>
+      </div>
+      <div class="travel-copy reveal">
+        <p>For guests joining us in Tampa, we have selected the Hampton Inn &amp; Suites Tampa/Ybor City/Downtown as our wedding weekend hotel.</p>
+        <div class="travel-columns">
+          <div><span>Hotel</span><strong>Hampton Inn &amp; Suites Tampa/Ybor City/Downtown</strong><small>1301 E 7th Ave, Tampa, FL 33605</small></div>
+          <div><span>Room Block</span><strong>Wedding Room Block Available</strong><small>Room-block information will be provided to guests who select hotel accommodations when they RSVP.</small></div>
+          <div><span>Airport</span><strong>Tampa International Airport</strong><small>TPA</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rsvp" id="rsvp">
+      <article class="rsvp-card reveal">
+        <p class="script">Kindly reply</p>
+        <h2>RSVP</h2>
+        <p>Formal online RSVP will open after invitations are mailed.</p>
+        <a href="mailto:?subject=Sam%20and%20Madison%20Wedding" class="button">Save the date</a>
+      </article>
+    </section>
+
+    <section class="finale">
+      <div class="finale-photo"></div>
+      <div class="finale-overlay"></div>
+      <div class="finale-copy reveal">
+        <p class="script">Forever starts here.</p>
+        <h2>We'll see you<br>at the altar.</h2>
+        <p>With love,<br><strong>Sam & Madison</strong></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-crest footer-crest-image">
+      <img src="assets/save-the-date-crest-clean.png" alt="S and M Newton wedding crest">
+    </div>
+    <p>Crafted with love for the future Newtons.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
